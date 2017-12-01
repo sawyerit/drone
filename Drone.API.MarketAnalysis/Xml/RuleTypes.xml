@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Rules>
+	<Rule>Stylesheets</Rule>
+	<Rule>Images</Rule>
+	<Rule>Links</Rule>
+	<Rule>Text</Rule>
+	<Rule>AdminUrls</Rule>
+	<Rule>Urls</Rule>
+	<Rule>ATags</Rule>
+	<Rule>Cookies</Rule>
+	<Rule>Generators</Rule>
+	<Rule>Metas</Rule>
+	<Rule>Scripts</Rule>
+</Rules>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC737490-209B-4D0D-9EBE-65F299256D12}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Drone.API.DNS</RootNamespace>
+    <AssemblyName>Drone.API.DNS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A6Record.cs" />
+    <Compile Include="AAAARecord.cs" />
+    <Compile Include="AfsdbRecord.cs" />
+    <Compile Include="Answer.cs" />
+    <Compile Include="ARecord.cs" />
+    <Compile Include="CNameRecord.cs" />
+    <Compile Include="DataBuffer.cs" />
+    <Compile Include="DNameRecord.cs" />
+    <Compile Include="DnsAnswer.cs" />
+    <Compile Include="DnsEntry.cs" />
+    <Compile Include="DnsQuery.cs" />
+    <Compile Include="DomainNameOnly.cs" />
+    <Compile Include="DSRecord.cs" />
+    <Compile Include="ExceptionRecord.cs" />
+    <Compile Include="HInfoRecord.cs" />
+    <Compile Include="IRecordData.cs" />
+    <Compile Include="IsdnRecord.cs" />
+    <Compile Include="KeyRecord.cs" />
+    <Compile Include="KXRecord.cs" />
+    <Compile Include="LocRecord.cs" />
+    <Compile Include="MBRecord.cs" />
+    <Compile Include="MGRecord.cs" />
+    <Compile Include="MInfoRecord.cs" />
+    <Compile Include="MRRecord.cs" />
+    <Compile Include="MXRecord.cs" />
+    <Compile Include="NaptrRecord.cs" />
+    <Compile Include="NsapRecord.cs" />
+    <Compile Include="NSRecord.cs" />
+    <Compile Include="NullRecord.cs" />
+    <Compile Include="PrefAndDomain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PtrRecord.cs" />
+    <Compile Include="PXRecord.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="Record.cs" />
+    <Compile Include="RPRecord.cs" />
+    <Compile Include="RTRecord.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="SigRecord.cs" />
+    <Compile Include="SoaRecord.cs" />
+    <Compile Include="SrvRecord.cs" />
+    <Compile Include="TextOnly.cs" />
+    <Compile Include="TKeyRecord.cs" />
+    <Compile Include="TSigRecord.cs" />
+    <Compile Include="TxtRecord.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="WksRecord.cs" />
+    <Compile Include="X25Record.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Drone.Shared\Drone.Shared.csproj">
+      <Project>{2a9965dd-1b4b-4254-95e1-6c68eb2d3626}</Project>
+      <Name>Drone.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

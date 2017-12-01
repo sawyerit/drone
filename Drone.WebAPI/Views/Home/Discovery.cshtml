@@ -1,0 +1,82 @@
+﻿@model Dictionary<string, List<Drone.WebAPI.Models.API>>
+
+
+@section styles {
+    <link href="@Url.Content("~/Content/discovery.css")" rel="stylesheet" type="text/css" />
+}
+
+<div id="main_content">
+    <section class="header">
+        <hgroup class="title">
+            <a id="top"></a>
+                <h1>BI Data Web API Documentation!</h1>            
+        </hgroup>
+        <p>
+            The BI Data Web API gives you access to data that BI collects from the web such as Facebook, Twitter, Crunchbase, and web crawling data. 
+                You can also contribute to the data collection by using the post api's. All data is in json format.
+        </p>
+
+        <div>
+            <nav>
+                <ul>
+                    @foreach (KeyValuePair<string, List<Drone.WebAPI.Models.API>> keyVP in Model)
+                    {        
+                        <li>
+                            <a href="#@keyVP.Key" class="scroll">@keyVP.Key</a>
+                        </li>            
+                    }
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section>
+        <div id="content_section">
+            @foreach (KeyValuePair<string, List<Drone.WebAPI.Models.API>> keyVP in Model)
+            {
+                <a id="@keyVP.Key"></a>
+                <div class="functional_title">
+                    <h1>@keyVP.Key</h1>
+                </div>
+                <div class="top_link"><a href="#top" class="scroll">top</a></div>
+                <div class="clear">
+                    @foreach (var api in keyVP.Value)
+                    {
+                        <div class="call_header">
+                            <span class="bold_large">@api.Type.ToString() > </span><span class="bold_medium">@api.Url</span>
+                        </div>
+                        <div class="call_description">
+                            <span class="i">@api.Documentation</span><br />
+                            <div style="margin: 10px;">
+                                <span class="bold_medium" style="text-decoration: underline;">Usage Example: </span>
+                                <div style="overflow: auto;">
+                                    @if (api.UsageExample.Contains("bizintel-ws.intranet.gdg"))
+                                    {
+                                        <a href="@Html.Raw(api.UsageExample)">@Html.Raw(api.UsageExample)</a>
+                                    }
+                                    else
+                                    {
+                                        @Html.Raw(api.UsageExample)
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    }
+                </div>
+            }
+        </div>
+    </section>
+</div>
+
+@section discoveryScript {
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+            });
+        });
+    </script>
+}
+

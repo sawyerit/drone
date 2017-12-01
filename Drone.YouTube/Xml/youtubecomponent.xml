@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<accounts>
+	<account>
+		<name>GoDaddy</name>
+		<id>godaddy</id>
+		<isenabled>true</isenabled>
+		<apiuri>http://bizintel-ws.intranet.gdg/bidata/api/youtube</apiuri>
+		<commonapiuri>http://bizintel-ws.intranet.gdg/bidata/api/common</commonapiuri>
+		<token>
+			<accesstoken></accesstoken>
+			<accesstokensecret></accesstokensecret>
+			<consumerkey></consumerkey>
+			<consumersecret></consumersecret>
+			<devkey>AI39si7H3JsgcnrDNQ_-_NVMklAztUBMREtgH3pdiIb0iX9ASor__Nw5q2tT-0V1H8gnnVZyFsrPQpUmBcdAS6HWswa4UNaUyw</devkey>
+		</token>
+		<youtube>
+			<!-- 15, 60, 1440 (full day), daily, weekly, sunday, monday, tuesday, wed etc.-->
+			<isenabled>true</isenabled>
+			<interval>daily</interval>
+		</youtube>
+		<squatters>
+		</squatters>
+	</account>
+</accounts>

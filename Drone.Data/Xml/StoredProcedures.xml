@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StoredProcedures>	
+	<!-- Begin Twitter -->	
+	<!-- Gets -->
+	<StoredProcedure ProcName="TwitterKeywordLookup" ProcCommand="rptTwitterKeywordLookup_get_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<!-- Inserts -->
+	<StoredProcedure ProcName="TwitterMentionsRepliesInsert" ProcCommand="rptTwitterMentionsReplies_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="TwitterUsersInsert" ProcCommand="rptTwitterUsers_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="TwitterMentionsbyKeywordsInsert" ProcCommand="rptTwitterMentionsbyKeywords_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="TwitterFollowersInsert" ProcCommand="rptTwitterFollowers_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="TwitterTrendInsert" ProcCommand="rptTwitterWoeDetail_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<!-- End Twitter -->
+	
+	
+	<!-- Begin WebHost MarketShare -->
+	<StoredProcedure ProcName="MarketShareDomainsByTypeDate" ProcCommand="rptDomainsByTypeGet_sp" ProcDatabase="gdWebmarketShare" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="MarketShareInsUp" ProcCommand="rptDomainMarketShareTypeIns_sp" ProcDatabase="gdWebmarketShare" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="MarketShareTableIns" ProcCommand="rptDomainMarketShareBulkMerge_sp" ProcDatabase="gdWebmarketShare" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="MarketShareCleanUp" ProcCommand="rptDomainMarketShareDailyCleanup_sp" ProcDatabase="gdWebmarketShare" ProcConnection="BigM1DMStagingRW" />
+	<!-- End WebHost MarketShare -->
+	
+	
+	<!-- Begin Crunchbase -->
+	<StoredProcedure ProcName="SmallBusinessTrackingInsUpd" ProcCommand="rptSmallBusinessTrackingInsUpd_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="CrunchbaseGetByDomain" ProcCommand="rptSmallBusinessTrackingByDomain_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<!-- End Crunchbase -->
+	
+	
+	<!-- Begin Facebook -->
+	<StoredProcedure ProcName="FacebookPageLikesInsert" ProcCommand="rptFacebookPageLikes_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="FacebookDemographicInsert" ProcCommand="rptFacebookDemographics_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />	
+	<!-- End Facebook -->
+	
+	
+	<!-- Begin YouTube -->
+	<StoredProcedure ProcName="YouTubeVideoInsert" ProcCommand="rptYoutubeCommercialLookup_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="YouTubeVideoDetailInsert" ProcCommand="rptYoutubeGDCommercials_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="YouTubeCompetitorChannelInsert" ProcCommand="rptYoutubeCompetitorsChannels_insert_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	<!-- End YouTube -->
+
+	
+	<!-- Begin Portfolio Domains API -->
+	<StoredProcedure ProcName="PortfolioDomainsGet" ProcCommand="rptGdDomainsGet_sp" ProcDatabase="gdWebmarketShare" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="PortfolioDomainsGetByName" ProcCommand="rptGdDomainsInfoByDomainNameGet_sp" ProcDatabase="gdWebmarketShare" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="PortfolioDomainsGetByShopper" ProcCommand="rptGdDomainsInfoByShopperGet_sp" ProcDatabase="gdWebmarketShare" ProcConnection="BigM1DMStagingRW" />
+	<StoredProcedure ProcName="PortfolioTableIns" ProcCommand="rptGdDomainAttributesBulkMerge_sp" ProcDatabase="gdWebmarketShare" ProcConnection="BigM1DMStagingRW" />
+		<!-- End Portfolio Domains API -->
+	
+	
+	<!--  Shared -->
+	<StoredProcedure ProcName="GoDaddyCompetitiors" ProcCommand="rptTwitterCompetitiors_get_sp" ProcDatabase="GDReports" ProcConnection="BigM1DMStagingRW" />
+	
+</StoredProcedures>

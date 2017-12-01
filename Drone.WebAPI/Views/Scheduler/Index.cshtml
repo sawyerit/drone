@@ -1,0 +1,587 @@
+﻿@model List<Drone.Scheduler.Job>
+
+@section styles {
+    <link href="@Url.Content("~/Content/scheduler.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/reveal.css")" rel="stylesheet" type="text/css" />
+    @*    <link href="@Url.Content("~/Content/jquery.ui.datepicker.css")" rel="stylesheet" />*@
+    <link href="@Url.Content("~/Content/jquery.ui.all.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/jquery.ui.core.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/jquery-ui-timepicker-addon.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/jquery.ui.tabs.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/jquery-cron.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/jquery.ui.button.css")" rel="stylesheet" />
+}
+
+@section scripts{
+    <!-- templating js -->
+    <script src="@Url.Content("~/Scripts/mustache.js")" type="text/javascript"></script>
+    <!-- pop up reveal -->
+    <script src="@Url.Content("~/Scripts/jquery.reveal.js")" type="text/javascript"></script>
+    @*    <script src="@Url.Content("~/Scripts/jquery.ui.core.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.ui.widget.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.ui.tabs.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.ui.datepicker.js")"></script>*@
+    <script src="@Url.Content("~/Scripts/jquery-ui.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-timepicker-addon.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-cron.js")"></script>
+}
+<div id="body">
+    <div class="content-wrapper">
+        <hgroup class="page-title">
+            <h1>Scheduler Dashboard</h1>
+        </hgroup>
+    </div>
+    <section>
+        <div class="container" style="border-bottom: none; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;">
+            <div class="container-header">
+                Jobs Summary
+            </div>
+            <table>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <div class="insetdiv">
+                            <div id="job-summary-div"></div>
+                        </div>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <div id="job-summary-menudiv" class="insetdiv">
+                            <table id="job-summary-menutable">
+                                <tr class="job-headerrow">
+                                    <td colspan="2">
+                                        Summary Menu
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="menu-img">
+                                        <img id="imgnewbutton" src="@Url.Content("~/Content/Images/plus.png")" alt="Image" />
+                                    </td>
+                                    <td>
+                                        <div id="newbutton" class="action">New Job</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="imgrefreshsummary" src="@Url.Content("~/Content/Images/refresh.png")" width="32" height="32" alt="Image" class="action" />
+                                    </td>
+                                    <td>
+                                        <div id="refreshsummary" class="action">Refresh</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="@Url.Content("~/Content/Images/bluequestion.jpg")" width="32" height="32" alt="Image" />
+                                    </td>
+                                    <td>Help</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="container" style="border-top: none; border-top-left-radius: 0px; border-top-right-radius: 0px;">
+            <div class="container-header" id="detail-header-name">
+                Job Detail
+            </div>
+            <table>
+                <tr>
+                    <td style="vertical-align: top;">
+                        <div class="insetdiv">
+                            <div id="job-detail-div">
+                                <div style="min-height: 184px; text-align: center; font-weight: bold; font-size: larger;">Please choose a job from above to view details.</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <div id="job-detail-menudiv" class="insetdiv">
+                            <table id="job-detail-menutable">
+                                <tr class="job-headerrow">
+                                    <td colspan="2">
+                                        Selected Item
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="menu-img">
+                                        <img id="imgenabledisablejob" src="@Url.Content("~/Content/Images/disable.png")" alt="Image" class="grayimg" />
+                                    </td>
+                                    <td>
+                                        <div id="enabledisablejob">Disable</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="imgrunjob" src="@Url.Content("~/Content/Images/runnow.png")" width="30" height="30" alt="Image" class="grayimg" />
+                                    </td>
+                                    <td>
+                                        <div id="runjob">Run Now</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="imgeditjob" src="@Url.Content("~/Content/Images/configure.png")" width="35" height="35" alt="Image" class="grayimg" />
+                                    </td>
+                                    <td>
+                                        <div id="editjob">Edit</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img id="imgdeletejob" src="@Url.Content("~/Content/Images/redcross.png")" width="32" height="32" alt="Image" class="grayimg" />
+                                    </td>
+                                    <td>
+                                        <div id="deletejob">Delete</div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</div>
+<!-- new job reveal form -->
+<div id="jobReveal" class="reveal-modal">
+    <form id="jobform" action="~/Scheduler/CreateNewJob" enctype="multipart/form-data" method="post">
+        <table>
+            <tr class="job-headerrow b">
+                <td colspan="2">
+                    <div id="jobformtitle">Create New Job</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 100px;" class="b">IsActive: </td>
+                <td>
+                    <input type="hidden" id="jobidtb" name="jobidtb" />
+                    <input type="checkbox" id="isactivecb" name="isactivecb" /><label for="isactivecb">Inactive</label>
+                </td>
+            </tr>
+            <tr>
+                <td class="b">Job Type: </td>
+                <td>
+                    <select id="jobtypedd" name="jobtypedd">
+                        <option selected="selected" value="BTEQ">BTEQ</option>
+                        <option value="R">R</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="b">Project Name: </td>
+                <td>
+                    <input type="text" id="projnametb" name="projnametb" required />
+                    <div id="editprojname" style="display:none;"></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="b">
+                    <br />
+                    Script Files
+                </td>
+                <td style="vertical-align: bottom;">
+                    <div id="resetfiles" style="width:40px;" class="action">(reset)</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="borderdiv">
+                        <table>
+                            <tr>
+                                <td style="vertical-align: top; background-color: lightgray;" class="b">
+                                    <div>File(s): </div>
+                                </td>
+                                <td>
+                                    <input type="file" id="scriptfiles" name="scriptfiles" multiple="multiple" />
+                                    <div id="chosenfiles"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: lightgray;" class="b">Master Script Name:</td>
+                                <td>
+                                    <select id="scriptdd" name="scriptdd"></select>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="b">
+                    Scheduling
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="borderdiv">
+                        <table>
+                            <tr>
+                                <td class="b" style="background-color: lightgray;">Start Time: </td>
+                                <td>
+                                    <input type="text" id="starttimetb" name="starttimetb" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="b" style="background-color: lightgray;">Interval: </td>
+                                <td>
+                                    <input type="hidden" id="cronxtb" name="cronxtb" required />
+                                    <div id="cronDiv"></div>
+                                    <div id="cronschedule"></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Save Job" onclick="$('body').curs('wait');" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+<!-- template for summary content -->
+<script id="jobSummaryTemplate" type="text/template">
+    <table id="job-summary">
+        <tr class="job-headerrow">
+            <td>
+                Project Name
+            </td>
+            <td>
+                Last Exit Code
+            </td>
+            <td>
+                Last Run Start
+            </td>
+            <td>
+                Last Run Complete
+            </td>
+            <td style="width: 90px;">
+                Status
+            </td>
+        </tr>
+        {{#.}}
+        <tr id="row-{{ProjectName}}" class="job-summary-row {{Schedule.ErrorExists}}" onclick="callGetJobByID('{{Schedule.StringId}}');">
+            <td>
+                <div class="job-item">
+                    {{ProjectName}}
+                </div>
+            </td>
+            <td>
+                <div class="job-item">
+                    {{Schedule.LastRunExitCode}}
+                </div>
+            </td>
+            <td>
+                <div class="job-item">
+                    {{Schedule.LastRunStart}}
+                </div>
+            </td>
+            <td>
+                <div class="job-item">
+                    {{Schedule.LastRunComplete}}
+                </div>
+            </td>
+            <td>
+                <div class="job-item b {{Schedule.Status}}">
+                    {{Schedule.Status}}
+                </div>
+            </td>
+        </tr>
+        {{/.}}
+    </table>
+</script>
+<!-- template for detail content -->
+<script id="jobTemplate" type="text/template">
+    <table id="job-detail">
+        <tr class="job-headerrow">
+            <td>Job Type</td>
+            <td>Active</td>
+            <td>Last Modified</td>
+            <td>Initial Start</td>
+            <td>Next Run</td>
+        </tr>
+        <tr class="job-summary-row">
+            <td>{{JobType}}</td>
+            <td>{{IsActive}}</td>
+            <td>{{LastModified}}</td>
+            <td>{{Schedule.StartTime}}</td>
+            <td>{{Schedule.NextRun}}</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <div class="sep"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <table>
+                    <tr>
+                        <td class="b">Script File: </td>
+                        <td><a href="file://{{Schedule.ScriptLocation}}" target="_blank">{{Schedule.ScriptFileOnly}}</a></td>
+                    </tr>
+                    <tr>
+                        <td class="b">Log location:  </td>
+                        <td><a href="file://{{Schedule.LogLocation}}" target="_blank">{{Schedule.LogLocation}}</a></td>
+                    </tr>
+                    <tr>
+                        <td class="b">Export location:  </td>
+                        <td><a href="file://{{Schedule.ExportLocation}}" target="_blank">{{Schedule.ExportLocation}}</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</script>
+
+<script type="text/javascript">
+    var selectedProj;
+    var outputFiles = [];
+    var cronDiv;
+    var empty_input;
+
+    $(function () {
+        empty_input = $('#scriptfiles').clone();
+
+        //refresh the summary data
+        $('#refreshsummary, #imgrefreshsummary').click(function () {
+            $("body").curs("wait");
+            setTimeout(LoadSummaryData, 1000);
+        });
+
+        $("#isactivecb").button().click(function () {
+            var text = $(this).is(':checked') ? "Active" : "Inactive"
+            $(this).button('option', 'label', text);
+        });
+
+        setupNewJobDialog();
+
+        //load the initial data, after setting everything up?
+        LoadSummaryData();
+    });
+
+    function setupNewJobDialog() {
+        //open the new job dialog
+        $('#newbutton, #imgnewbutton').click(function () {
+            $('#jobformtitle').text("Create New Job");
+
+            clearForm();//in case it was being edited before
+
+            $('#jobReveal').reveal({
+                animation: 'fadeAndPop',
+                animationspeed: 300,
+                closeonbackgroundclick: true,
+                dismissmodalclass: 'close-reveal-modal'
+            });
+        });
+
+        $('#isactivecb').button({ label: "Inactive" });
+        $('#isactivecb').prop('checked', 'false').change();
+        $('#isactivecb').button("refresh");
+
+        //setup the date time picker on the new job dialog
+        $('#starttimetb').datetimepicker({
+            controlType: 'select',
+            timeFormat: 'hh:mm tt'
+        });
+
+        $('#starttimetb').on("change", function () {
+            $('.cron-time-hour').trigger('change');
+        });
+
+        //fileupload on the new job dialog
+        $('#jobform').on('click', '#resetfiles', function () {
+            $('#scriptfiles').replaceWith(empty_input.clone());
+            document.getElementById('scriptfiles').addEventListener('change', handleFileSelect, false);
+            outputFiles = [];
+            $('#chosenfiles').html('');
+            $('#scriptdd').empty();
+        })
+
+
+        //bind the tabs on the new job dialog
+        //$("#cronTabs").tabs();
+        cronDiv = $('#cronDiv').cron({
+            useGentleSelect: false,
+            onChange: function () {
+                var cronx = $(this).cron("value");
+                $('#cronxtb').val(cronx);
+
+                $("body").curs("wait");
+                var strMethodUrl = '@Url.Action("GetSchedule", "Scheduler")?cron=' + cronx + '&startdatetime=' + $('#starttimetb').val();
+                $.getJSON(strMethodUrl, function (data) {
+                    var outputSchedule = [];
+
+                    $.each(data, function (i, item) {
+                        outputSchedule.push('<li><strong>' + item + '</strong></li>');
+                    });
+
+                    $('#cronschedule').html('<ol>' + outputSchedule.join('') + '</ol>');
+                    $("body").curs("default");
+                });
+            }
+        });
+
+        //bind listener for selecting files to upload on new job dialog
+        document.getElementById('scriptfiles').addEventListener('change', handleFileSelect, false);
+    }
+
+    function handleFileSelect(evt) {
+        var files = evt.target.files;
+
+        for (var i = 0, f; f = files[i]; i++) {
+            outputFiles.push('<li><strong>', escape(f.name), '</strong> - ' + f.size + ' bytes </li>');
+            $('#scriptdd').append($("<option/>", { value: escape(f.name), text: escape(f.name) }));
+        }
+        $('#chosenfiles').html('<ul>' + outputFiles.join('') + '</ul>');
+    }
+
+    //Get call for the summary data
+    function LoadSummaryData() {
+        var strMethodUrl = '@Url.Action("GetSummary", "Scheduler")';
+        $.getJSON(strMethodUrl, function (data) {
+            WireUpSummary(data);
+        });
+    }
+
+    //Get call for detail data, fired when clicking on a summary row
+    function callGetJobByID(id) {
+        $("body").curs("wait");
+        $("#job-summary td").curs("wait");
+        var strMethodUrl = '@Url.Action("GetDetails", "Scheduler")?id=' + id;
+        $.getJSON(strMethodUrl, function (data) {
+            WireUpDetail(data);
+            SetHighlightedRow();
+        });
+    }
+
+    function SetHighlightedRow() {
+        $('#job-summary td.chosen').each(function () {
+            $(this).removeClass('chosen');
+        });
+
+        if (selectedProj) {
+            var seldiv = $('div.job-item:contains("' + selectedProj + '")');
+            seldiv.closest('tr').find('td').each(function () {
+                $(this).addClass('chosen');
+            });
+        }
+    }
+
+    //wire the summary section, fill template
+    function WireUpSummary(data) {
+        //fill in the job summary
+        $('#job-summary-div').html(Mustache.to_html($('#jobSummaryTemplate').html(), data));
+        SetHighlightedRow();
+        $("body").css("cursor", "default");
+    }
+
+    //wire the detail section, bind buttons as necessary, fill template
+    function WireUpDetail(data) {
+        //unbind so we don't have multiple events
+        $('#runjob, #imgrunjob').unbind('click');
+        $('#enabledisablejob, #imgenabledisablejob').unbind('click');
+        $('#editjob, #imgeditjob').unbind('click');
+
+        selectedProj = data.ProjectName;
+
+        //set header name to job chosen
+        $('#detail-header-name').text("Job Detail - " + data.ProjectName);
+
+        //undo grayscale disabled buttons
+        $('.grayimg').each(function () { $(this).removeClass("grayimg"); });
+        $("div[id$='job'], img[id$='job']").each(function () { $(this).addClass("action"); });
+
+        //fill in the job details
+        $('#job-detail-div').html(Mustache.to_html($('#jobTemplate').html(), data));
+
+        //Wire run buttons
+        $('#runjob, #imgrunjob').click(function () {
+            if (confirm("Are you sure you want to run this job now?")) {
+                $("body").curs("wait");
+                var url = '@Url.Action("RunJob")';
+                $.post(url, { "id": data.Schedule.StringId }, function (data) {
+                    WireUpSummary(data);
+                });
+                //wait for the job to be scheduled and then refresh the summary grid
+                setTimeout(LoadSummaryData, 2000);
+            }
+        });
+
+        //wire enable disable actions
+        $('#enabledisablejob, #imgenabledisablejob').click(function () {
+            $("body").curs("wait");
+            var url = '@Url.Action("EnableDisableJob")';
+            $.post(url, { "id": data.Schedule.StringId }, function (data) {
+                LoadSummaryData();
+                WireUpDetail(data);
+            });
+        });
+        //toggle the enable disable image
+        if (data.IsActive.toLowerCase() == "true") {
+            $('#imgenabledisablejob').attr("src", "@Url.Content("~/Content/Images/disable.png")");
+            $('#enabledisablejob').text("Disable");
+        } else {
+            $('#imgenabledisablejob').attr("src", "@Url.Content("~/Content/Images/greencheck.png")");
+            $('#enabledisablejob').text("Enable");
+        }
+
+        //wire edit button
+        $('#editjob, #imgeditjob').click(function () {
+            $("body").curs("wait");
+            //populate form, reveal it
+            $('#jobidtb').val(data.Schedule.StringId);
+            $('#jobformtitle').text("Edit Job");
+
+            if ((data.IsActive.toLowerCase() == 'true')) {
+                $('#isactivecb').prop('checked', 'true').change();
+                $('#isactivecb').button("option", "label", "Active");
+            } else {
+                $('#isactivecb').prop('checked', 'false').change();
+                $('#isactivecb').button("option", "label", "Inactive");
+            }
+
+            $("#jobtypedd option[value='" + data.JobType.toUpperCase() + "']").prop("selected", true);
+            $('#projnametb').val(data.ProjectName).hide();
+            $('#editprojname').html(data.ProjectName).show();
+            $('#starttimetb').val(data.Schedule.StartTime);
+            $('#scriptdd').append($("<option/>", { value: data.ScriptFileName, text: data.ScriptFileName }));
+            cronDiv.cron("value", data.Schedule.CronX);
+
+            $('#jobReveal').reveal({
+                animation: 'fadeAndPop',
+                animationspeed: 300,
+                closeonbackgroundclick: true,
+                dismissmodalclass: 'close-reveal-modal'
+            });
+            $("body").curs("default");
+        });
+
+        //set the cursor back to default now that we've loaded and bound everything
+        $("#job-summary td").curs("pointer");
+        $("body").curs("default");
+    }
+
+    function clearForm() {
+        $('#jobidtb').val('');
+        $('#jobformtitle').text("Create New Job");
+        $('#isactivecb').prop('checked', false);
+        $("#jobtypedd").prop("selectedIndex", 0);
+        $('#projnametb').val('').show();
+        $('#editprojname').html('').hide();
+        $('#starttimetb').val('');
+        $('#scriptdd').empty();
+        cronDiv.cron("value", "* * * * * *");
+    }
+
+    $.fn.curs = function (state) {
+        $(this).css("cursor", state);
+    };
+</script>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<accounts>
+	<account>
+		<name>GoDaddy</name>
+		<id>8749090685</id>
+		<isenabled>true</isenabled>
+		<accesstoken>CAABpOZATgeIABAAhAWQyZAx1Ky2WeZCdrtZBid1tdSyX7EjOsAW0IxTD7iXh2xY4V2I4mT6VQ7aRebpHZCmDEX0qDUnZCvpX1gC2oJ1mWQiLzSirT3dbZB7uKPmPYE5zPcZA3mqiy1sSieLGfNiJmlutyFeymPrWdZAe3DmbZCPJBZA0XZARlA3DhZCDZCBlNVv4FP1pIZD</accesstoken>
+		<nextruninterval>900</nextruninterval> <!-- in seconds -->
+		<apiuri>http://bizintel-ws.intranet.gdg/bidata/api/facebook</apiuri>
+		<commonapiuri>http://bizintel-ws.intranet.gdg/bidata/api/common</commonapiuri>
+		<facebookfaninfo>
+			<isenabled>true</isenabled>
+			<interval>daily</interval><!-- for "likes & demographics" -->
+		</facebookfaninfo>
+		<facebookinsight>
+			<isenabled>false</isenabled>
+			<interval>daily</interval>
+		</facebookinsight>
+	</account>
+</accounts>

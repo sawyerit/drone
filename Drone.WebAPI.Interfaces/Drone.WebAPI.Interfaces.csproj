@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BFF40856-C6A0-42DA-8A9C-165F7AE26024}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Drone.WebAPI.Interfaces</RootNamespace>
+    <AssemblyName>Drone.WebAPI.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Drone.WebAPI\Properties\AssemblyInfoCommon.cs">
+      <Link>Properties\AssemblyInfoCommon.cs</Link>
+    </Compile>
+    <Compile Include="IMiscService.cs" />
+    <Compile Include="IRService.cs" />
+    <Compile Include="IPortfolioService.cs" />
+    <Compile Include="ICommonService.cs" />
+    <Compile Include="ICrunchbaseService.cs" />
+    <Compile Include="IDomainsService.cs" />
+    <Compile Include="IFacebookService.cs" />
+    <Compile Include="IMarketShareService.cs" />
+    <Compile Include="ITwitterService.cs" />
+    <Compile Include="IYouTubeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Drone.Entities.Crunchbase\Drone.Entities.Crunchbase.csproj">
+      <Project>{6e973b8b-e867-49d9-89e6-30201cf473e9}</Project>
+      <Name>Drone.Entities.Crunchbase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Facebook\Drone.Entities.Facebook.csproj">
+      <Project>{204bb520-11e7-4f1b-a833-ae9938e85e5d}</Project>
+      <Name>Drone.Entities.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.MarketShare\Drone.Entities.MarketShare.csproj">
+      <Project>{7f550d4b-8b0a-4682-afda-5fb22472b781}</Project>
+      <Name>Drone.Entities.MarketShare</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Portfolio\Drone.Entities.Portfolio.csproj">
+      <Project>{6f6e82aa-6a02-4e95-9ddf-ce7c8bdb7c1c}</Project>
+      <Name>Drone.Entities.Portfolio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Twitter.v11\Drone.Entities.Twitter.v11.csproj">
+      <Project>{e1c2e738-c4f6-407e-92a4-26a71ff102da}</Project>
+      <Name>Drone.Entities.Twitter.v11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.WebAPI\Drone.Entities.WebAPI.csproj">
+      <Project>{bdce53b0-1f96-410f-a6c1-778d0649b572}</Project>
+      <Name>Drone.Entities.WebAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.YouTube\Drone.Entities.YouTube.csproj">
+      <Project>{1040cec2-fdce-4e6b-9973-0afe94f21671}</Project>
+      <Name>Drone.Entities.YouTube</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

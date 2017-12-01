@@ -1,0 +1,8 @@
+﻿<services>
+  <service>Crunchbase</service>
+  <service>MarketShare</service>
+  <service>QueueProcessor</service>
+  <service>SocialMedia</service>
+  <service>Scheduler</service>
+  <service>CrawlDaddy</service>
+</services>

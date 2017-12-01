@@ -1,0 +1,7 @@
+Drone.API.Crunchbase.dll
+Drone.API.Dig.dll
+Drone.Core.dll
+Drone.Shared.dll
+Drone.Crunchbase.dll
+Drone.Entities.Crunchbase.dll
+Drone.Entities.WebAPI.dll

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0086bd72-ae1f-49ff-b392-5f1c8224ed1e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://g1twrptweb003/BILoggerService/BILoggerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BILoggerService.disco" MetadataType="Disco" ID="de2feb1d-a3ca-45bc-8e40-3c42d3e2e4ce" SourceId="1" SourceUrl="http://g1twrptweb003/BILoggerService/BILoggerService.svc?disco" />
+    <MetadataFile FileName="BILoggerService.xsd" MetadataType="Schema" ID="3aebfd19-9a15-4b4e-8779-c92d2f92e128" SourceId="1" SourceUrl="http://g1twrptweb003/BILoggerService/BILoggerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BILoggerService1.xsd" MetadataType="Schema" ID="6d23c421-c357-45ba-8fb2-b51db578033b" SourceId="1" SourceUrl="http://g1twrptweb003/BILoggerService/BILoggerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BILoggerService2.xsd" MetadataType="Schema" ID="762117ef-66ee-4707-bce7-e59860251882" SourceId="1" SourceUrl="http://g1twrptweb003/BILoggerService/BILoggerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BILoggerService3.xsd" MetadataType="Schema" ID="f8f417b0-2c36-4ce9-96bb-daa399cd6933" SourceId="1" SourceUrl="http://g1twrptweb003/BILoggerService/BILoggerService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BILoggerService.wsdl" MetadataType="Wsdl" ID="8c35e17e-8dec-4376-bcaa-2929c9f5e9d0" SourceId="1" SourceUrl="http://g1twrptweb003/BILoggerService/BILoggerService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

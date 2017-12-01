@@ -1,0 +1,24 @@
+﻿body {	
+}
+
+.i
+{
+	font-style:italic;
+}
+
+.bold_large
+{
+	font-weight: bold; 
+	font-size: larger;
+}
+
+.bold_medium
+{
+	font-weight: bold; 
+	font-size: medium;
+}
+
+.clear
+{
+	clear: both;
+}

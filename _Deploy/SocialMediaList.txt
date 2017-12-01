@@ -1,0 +1,16 @@
+Google.GData.*
+Drone.API.Facebook.dll
+Drone.API.Twitter.dll
+Drone.API.YouTube.dll
+Drone.Twitter.dll
+Drone.YouTube.dll
+Drone.Core.dll
+Drone.Facebook.dll
+Drone.Interfaces.dll
+Drone.Shared.dll
+Drone.Twitter.dll
+Drone.YouTube.dll
+Drone.Entities.Facebook.dll
+Drone.Entities.Twitter.v11.dll
+Drone.Entities.YouTube.dll
+Drone.Entities.WebAPI.dll

@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4021C5F-F2E7-4056-930D-E63579849E5C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Drone.Test</RootNamespace>
+    <AssemblyName>Drone.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\BITeamCARules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\Drone.API.MarketAnalysis\CommonReferences\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.8.3\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.8.3\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.2.2\lib\net40\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Drone.Manager\Properties\AssemblyInfoCommon.cs">
+      <Link>Properties\AssemblyInfoCommon.cs</Link>
+    </Compile>
+    <Compile Include="MiscTests.cs" />
+    <Compile Include="SchedulerTests.cs" />
+    <Compile Include="MongoDBTests.cs" />
+    <Compile Include="WebAPITests.cs" />
+    <Compile Include="QueueProcessorTests.cs" />
+    <Compile Include="SSLCheckTests.cs" />
+    <Compile Include="DNSHostTests.cs" />
+    <Compile Include="EmailHostTests.cs" />
+    <Compile Include="MarketShareTests.cs" />
+    <Compile Include="WebHostTests.cs" />
+    <Compile Include="DigTests.cs" />
+    <Compile Include="FacebookTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CrunchbaseTests.cs" />
+    <Compile Include="TwitterTests.cs" />
+    <Compile Include="TeraDataTests.cs" />
+    <Compile Include="WhoIsTests.cs" />
+    <Compile Include="XMLUtilityTests.cs" />
+    <Compile Include="YouTubeTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Drone.API.Crunchbase\Drone.API.Crunchbase.csproj">
+      <Project>{C2504CD2-0D8B-4CDC-9FFB-F377348B1107}</Project>
+      <Name>Drone.API.Crunchbase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.API.Dig\Drone.API.Dig.csproj">
+      <Project>{77742DD2-F292-4B7E-AB50-457453D6B0C8}</Project>
+      <Name>Drone.API.Dig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.API.DNS\Drone.API.DNS.csproj">
+      <Project>{a82ce4dd-9b08-439c-bc28-cb7b2bffa85c}</Project>
+      <Name>Drone.API.DNS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.API.Facebook\Drone.API.Facebook.csproj">
+      <Project>{2455CA56-2B61-4F88-9F92-BDF6B82AF8D5}</Project>
+      <Name>Drone.API.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.API.MarketAnalysis\Drone.API.MarketAnalysis.csproj">
+      <Project>{a880c34e-3363-4604-a27d-88df30f7fe68}</Project>
+      <Name>Drone.API.MarketAnalysis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.API.Twitter\Drone.API.Twitter.csproj">
+      <Project>{F689AC7F-F4C0-4F4C-9CB1-A092CA416AAB}</Project>
+      <Name>Drone.API.Twitter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.API.YouTube\Drone.API.YouTube.csproj">
+      <Project>{2737ED4F-372C-4DDE-9094-5A7EA06994AF}</Project>
+      <Name>Drone.API.YouTube</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Core\Drone.Core.csproj">
+      <Project>{724FAE18-ED6D-4625-AC6B-2A4041A8FC0E}</Project>
+      <Name>Drone.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Crunchbase\Drone.Crunchbase.csproj">
+      <Project>{a339c265-0c65-4aaf-a2d2-fa870779633c}</Project>
+      <Name>Drone.Crunchbase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Data.Queue\Drone.Data.Queue.csproj">
+      <Project>{AC54AD63-6193-4049-B29A-D197771D165B}</Project>
+      <Name>Drone.Data.Queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Data\Drone.Data.csproj">
+      <Project>{5c871e84-b68b-4a31-826a-d902f5c7fba1}</Project>
+      <Name>Drone.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Crunchbase\Drone.Entities.Crunchbase.csproj">
+      <Project>{6e973b8b-e867-49d9-89e6-30201cf473e9}</Project>
+      <Name>Drone.Entities.Crunchbase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Facebook\Drone.Entities.Facebook.csproj">
+      <Project>{204bb520-11e7-4f1b-a833-ae9938e85e5d}</Project>
+      <Name>Drone.Entities.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.MarketShare\Drone.Entities.MarketShare.csproj">
+      <Project>{7f550d4b-8b0a-4682-afda-5fb22472b781}</Project>
+      <Name>Drone.Entities.MarketShare</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Portfolio\Drone.Entities.Portfolio.csproj">
+      <Project>{6f6e82aa-6a02-4e95-9ddf-ce7c8bdb7c1c}</Project>
+      <Name>Drone.Entities.Portfolio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Twitter.v11\Drone.Entities.Twitter.v11.csproj">
+      <Project>{e1c2e738-c4f6-407e-92a4-26a71ff102da}</Project>
+      <Name>Drone.Entities.Twitter.v11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.WebAPI\Drone.Entities.WebAPI.csproj">
+      <Project>{bdce53b0-1f96-410f-a6c1-778d0649b572}</Project>
+      <Name>Drone.Entities.WebAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.YouTube\Drone.Entities.YouTube.csproj">
+      <Project>{1040cec2-fdce-4e6b-9973-0afe94f21671}</Project>
+      <Name>Drone.Entities.YouTube</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Facebook\Drone.Facebook.csproj">
+      <Project>{A113E506-60E1-41A4-9131-D1787CC1AAD8}</Project>
+      <Name>Drone.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Manager\Drone.Manager.csproj">
+      <Project>{12DF38ED-C924-48FB-A9C6-C727D2ECBECD}</Project>
+      <Name>Drone.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.QueueProcessor\Drone.QueueProcessor.csproj">
+      <Project>{c4adb4f4-21ea-4da9-bef3-d8ed137386a0}</Project>
+      <Name>Drone.QueueProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Scheduler\Drone.Scheduler.csproj">
+      <Project>{80927dc5-d78a-4b90-a292-69735c1bbe85}</Project>
+      <Name>Drone.Scheduler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Service\Drone.Service.csproj">
+      <Project>{da9a0ef4-223a-4c62-96a1-6ad4d65707a6}</Project>
+      <Name>Drone.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Shared\Drone.Shared.csproj">
+      <Project>{2A9965DD-1B4B-4254-95E1-6C68EB2D3626}</Project>
+      <Name>Drone.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.MarketShare\Drone.MarketShare.csproj">
+      <Project>{80B812DB-0FF8-4E98-B37E-A3CE1BF400AF}</Project>
+      <Name>Drone.MarketShare</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Twitter\Drone.Twitter.csproj">
+      <Project>{C3A00032-268D-4CEF-BF02-305C5098FCF9}</Project>
+      <Name>Drone.Twitter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.WebAPI.Interfaces\Drone.WebAPI.Interfaces.csproj">
+      <Project>{bff40856-c6a0-42da-8a9c-165f7ae26024}</Project>
+      <Name>Drone.WebAPI.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.WebAPI.Services\Drone.WebAPI.Services.csproj">
+      <Project>{ddd543f9-801a-4f19-8925-dfe269db0240}</Project>
+      <Name>Drone.WebAPI.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.YouTube\Drone.YouTube.csproj">
+      <Project>{407B0B57-E6F1-4B42-9851-82CAE0852160}</Project>
+      <Name>Drone.YouTube</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Drone.Shared\app.config">
+      <Link>app.config</Link>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

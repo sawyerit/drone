@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+	<Product name="shopify">
+		<!-- tattly.com -->
+		<Rules>
+			<Or>
+				<Rule type="cookies" property="name" value="_shopify"/>
+				<Rule type="text" property="html" value="var Shopify = Shopify" />
+				<Rule type="metas" property="content" value="cdn.shopify.com"/>
+				<And mincount="2">
+					<Rule type="links" property="href" value="cdn.shopify.com"/>
+					<Rule type="scripts" property="src" value="cdn.shopify.com"/>
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="volusion">
+		<!-- www.saferwholesale.com -->
+		<Rules>
+			<Or>
+				<Rule type="text" property="html" value="Ecommerce Web Site Design by &lt;a href=&quot;http://www.volusion.com&quot;" />
+				<Rule type="scripts" property="src" value="a/j/javascripts.js" />
+				<And mincount="2">
+					<Rule type="images" property="src" value="volusion.com"/>
+					<Rule type="scripts" property="src" value="/v/vspfiles/"/>
+					<Rule type="links" property="href" value="cdn1.volusion.com" />
+					<Rule type="text" property="html" value="http://www.volusion.com" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="bigcommerce">
+		<!-- .com -->
+		<Rules>
+			<Or>
+				<Rule type="text" property="html" value="Shopping Cart Software powered by BigCommerce." />
+				<Rule type="text" property="html" value="&lt;a href=&quot;http://www.bigcommerce.com/ecommerce-solution-features.php&quot;&gt;Ecommerce Solution&lt;/a&gt; by BigCommerce"/>
+				<And mincount="2">
+					<Rule type="images" property="src" value="cdn1.bigcommerce.com"/>
+					<Rule type="links" property="src" value="cdn1.bigcommerce.com"/>
+					<Rule type="text" property="html" value="cdn1.bigcommerce.com" />
+					<Rule type="text" property="html" value="cdn2.bigcommerce.com" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<!--<Product name="thefind upfront">
+		--><!-- www.tradetang.com/ --><!--
+		<Rules>
+			<Or>
+				<Rule type="scripts" property="src" value="upfront-badgeinit.js" />
+				<And mincount="2">
+					<Rule type="text" property="html" value="tf_upfront_" />
+					<Rule type="text" property="html" value="upfront-badgeinit.js" />
+					<Rule type="text" property="html" value="//upfront.thefind.com" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="yahoo store">
+		--><!-- www.scrapbook.com/ --><!--
+		<Rules>
+			<Or>
+				<Rule type="text" property="html" value="tempYahooStoreId" />
+				<Rule type="text" property="html" value="http://order.store.yahoo.net"/>
+				<Rule type="atags" property="src" value="store.yahoo.net" />
+				<And mincount="2">
+					<Rule type="text" property="html" value="yahoo_id"/>
+					<Rule type="links" property="href" value="store.yahoo.net"/>
+					<Rule type="stylesheets" property="href" value="store.yahoo.net"/>
+					<Rule type="scripts" property="src" value="store.yahoo.net"/>
+					<Rule type="text" property="html" value="store.yahoo.net" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="wp ecommerce">
+		--><!-- eyecaredepot.com --><!--
+		<Rules>
+			<And mincount="2">
+				<Rule type="scripts" property="src" value="wp-e-commerce.js" />
+				<Rule type="scripts" property="src" value="/wp-e-commerce/" />
+				<Rule type="images" property="src" value="/wp-e-commerce/" />
+				<Rule type="links" property="html" value="/wp-e-commerce/" />
+			</And>
+		</Rules>
+	</Product>
+	<Product name="magento">
+		--><!-- http://www.zumiez.com/ --><!--
+		<Rules>
+			<Or>
+				<And mincount="3">
+					<Rule type="stylesheets" property="href" value="/skin/frontend" />
+					<Rule type="images" property="src" value="/skin/frontend" />
+					<Rule type="links" property="href" value="/skin/frontend" />
+					<Rule type="text" property="html" value="magento" />
+					<Rule type="adminurls" property="magento" value="admin" />
+				</And>
+				<Rule type="cookies" property="name" value="frontend" />
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="virtuemart">
+		--><!-- www.wmsoftware.com --><!--
+		<Rules>
+			<Or>
+				<And mincount="2">
+					<Rule type="atags" property="href" value="com_virtuemart" />
+					<Rule type="scripts" property="src" value="mod_virtuemart" />
+					<Rule type="text" property="html" value="com_virtuemart" />
+				</And>
+				<Rule type="cookies" property="name" value="virtuemart" />
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="zencart">
+		--><!-- therawfoodworld.com/ --><!--
+		<Rules>
+			<Or>
+				<Rule type="generators" property="content" value="zen cart" />
+				<And mincount="2">
+					<Rule type="links" property="href" value="/includes/templates/" />
+					<Rule type="scripts" property="src" value="/includes/templates/" />
+					<Rule type="images" property="src" value="/includes/templates/" />
+					<Rule type="text" property="html" value="zenid" />
+				</And>
+				<Rule type="cookies" property="name" value="zenid" />
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="miva merchant">
+		--><!-- www.helmetcity.com --><!--
+		<Rules>
+			<Or>
+				<Rule type="text" property="src" value="Development by Miva Merchant" />
+				<And mincount="2">
+					<Rule type="images" property="src" value="/mm5/"/>
+					<Rule type="scripts" property="src" value="/mm5/"/>
+					<Rule type="atags" property="href" value="/mm5/merchant.mvc" />
+					<Rule type="text" property="html" value="mivamerchant" />
+					<Rule type="text" property="html" value="/mm5/" />
+				</And>
+				<Rule type="cookies" property="name" value="mm5" />
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="go daddy">
+		--><!-- www.kustomsmallengine.com --><!--
+		<Rules>
+			<Or>
+				<And mincount="2">
+					<Rule type="images" property="src" value="qsc_badge_dark.gif"/>
+					<Rule type="text" property="html" value="Go Daddy Quick Shopping Cart" />
+					<Rule type="atags" property="href" value="/viewcart.sc"/>
+				</And>
+				<Rule type="cookies" property="name" value="fb_" />
+			</Or>
+		</Rules>
+	</Product>-->
+</Products>

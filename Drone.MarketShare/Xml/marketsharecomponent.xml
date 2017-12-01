@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<accounts>
+	<account>
+		<name>GoDaddy</name>
+		<id>none</id>
+		<isenabled>true</isenabled>
+		<nextruninterval>86400</nextruninterval><!-- base interval, if not defined in component below (in seconds) -->
+		<apiuri>http://bizintel-ws.intranet.gdg/bidata/api/marketshare</apiuri>
+		<domainsapiuri>http://bizintel-ws.intranet.gdg/bidata/api/domains</domainsapiuri>
+		<token>
+			<accesstoken></accesstoken>
+			<accesstokensecret></accesstokensecret>
+			<consumerkey></consumerkey>
+			<consumersecret></consumersecret>
+		</token>
+		<whois><!-- registrar -->-->
+			<recordcount>3000</recordcount>
+			<interval>60</interval>
+			<isenabled>false</isenabled>
+			<verboselogging>false</verboselogging>
+		</whois>
+		<webhost>
+			<recordcount>10000</recordcount>
+			<interval>60</interval>
+			<isenabled>true</isenabled>
+			<maxparallel>3</maxparallel>
+			<verboselogging>false</verboselogging>
+		</webhost>
+		<emailhost>
+			<recordcount>5000</recordcount>
+			<interval>60</interval>
+			<isenabled>false</isenabled>
+			<verboselogging>false</verboselogging>
+		</emailhost>
+		<dnshost>
+			<recordcount>5000</recordcount>
+			<interval>60</interval>
+			<isenabled>false</isenabled>
+			<verboselogging>false</verboselogging>
+		</dnshost>
+		<sslcheck>
+			<recordcount>4000</recordcount>
+			<interval>60</interval>
+			<isenabled>false</isenabled>
+			<maxparallel>4</maxparallel>
+			<verboselogging>false</verboselogging>
+		</sslcheck>
+		<marketsharebuilder>
+			<recordcount>10000</recordcount>
+			<interval>60</interval>
+			<isenabled>true</isenabled>
+			<maxparallel>8</maxparallel>
+			<verboselogging>false</verboselogging>
+		</marketsharebuilder>
+		<marketsharecart>
+			<recordcount>10000</recordcount>
+			<interval>60</interval>
+			<isenabled>true</isenabled>
+			<maxparallel>8</maxparallel>
+			<verboselogging>false</verboselogging>
+		</marketsharecart>
+	</account>
+</accounts>

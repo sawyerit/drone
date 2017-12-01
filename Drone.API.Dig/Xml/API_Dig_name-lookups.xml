@@ -1,0 +1,537 @@
+<lookups>
+	<company name="SoftLayer">
+		<dba value="softlayer corporate c" />
+		<dba value="softlayer technologies inc." />
+		<dba value="softlayer technologies" />
+		<dba value="softlayer.com" />
+		<dba value="theplanet.com internet services" />
+		<dba value="theplanet.com internet services, inc." />
+	</company>
+	<company name="Network Solutions">
+		<dba value="network solutions, llc." />
+		<dba value="network solutions llc" />
+		<dba value="network solutions l.l.c." />
+	</company>
+	<company name="EveryDNS.net">
+		<dba value="everydns.net" />
+	</company>
+	<company name="DataPipe">
+		<dba value="datapipe, inc." />
+		<dba value="datapipe.net" />
+	</company>
+	<company name="Verizon (Cybertrust)">
+		<dba value="gte corporation" />
+	</company>
+	<company name="Register.com">
+		<dba value="register.com, inc." />
+		<dba value="register.com" />
+	</company>
+	<company name="MarkMonitor">
+		<dba value="markmonitor inc." />
+		<dba value="markmonitor.com" />
+	</company>
+	<company name="Dyn Inc">
+		<dba value="mailhop.org" />
+		<dba value="mydyndns.org" />
+		<dba value="dynect.net" />
+		<dba value="dyn.com" />
+		<dba value="dynamic network services, inc" />
+		<dba value="dynamic network services, inc." />
+	</company>
+	<company name="Amazon">
+		<dba value="amazon.com" />
+		<dba value="amazon.com, inc." />
+		<dba value="awsdns-00.co.uk" />
+		<dba value="awsdns-00.com" />
+		<dba value="awsdns-00.net" />
+		<dba value="awsdns-00.org" />
+		<dba value="awsdns-01.co.uk" />
+		<dba value="awsdns-01.com" />
+		<dba value="awsdns-01.net" />
+		<dba value="awsdns-01.org" />
+		<dba value="awsdns-02.co.uk" />
+		<dba value="awsdns-02.com" />
+		<dba value="awsdns-02.net" />
+		<dba value="awsdns-02.org" />
+		<dba value="awsdns-03.co.uk" />
+		<dba value="awsdns-03.com" />
+		<dba value="awsdns-03.net" />
+		<dba value="awsdns-03.org" />
+		<dba value="awsdns-04.co.uk" />
+		<dba value="awsdns-04.com" />
+		<dba value="awsdns-04.net" />
+		<dba value="awsdns-04.org" />
+		<dba value="awsdns-05.co.uk" />
+		<dba value="awsdns-05.com" />
+		<dba value="awsdns-05.net" />
+		<dba value="awsdns-05.org" />
+		<dba value="awsdns-06.co.uk" />
+		<dba value="awsdns-06.com" />
+		<dba value="awsdns-06.net" />
+		<dba value="awsdns-06.org" />
+		<dba value="awsdns-07.co.uk" />
+		<dba value="awsdns-07.com" />
+		<dba value="awsdns-07.net" />
+		<dba value="awsdns-07.org" />
+		<dba value="awsdns-08.co.uk" />
+		<dba value="awsdns-08.com" />
+		<dba value="awsdns-08.net" />
+		<dba value="awsdns-08.org" />
+		<dba value="awsdns-09.co.uk" />
+		<dba value="awsdns-09.com" />
+		<dba value="awsdns-09.net" />
+		<dba value="awsdns-09.org" />
+		<dba value="awsdns-10.co.uk" />
+		<dba value="awsdns-10.com" />
+		<dba value="awsdns-10.net" />
+		<dba value="awsdns-10.org" />
+		<dba value="awsdns-11.co.uk" />
+		<dba value="awsdns-11.com" />
+		<dba value="awsdns-11.net" />
+		<dba value="awsdns-11.org" />
+		<dba value="awsdns-12.co.uk" />
+		<dba value="awsdns-12.com" />
+		<dba value="awsdns-12.net" />
+		<dba value="awsdns-12.org" />
+		<dba value="awsdns-13.co.uk" />
+		<dba value="awsdns-13.com" />
+		<dba value="awsdns-13.net" />
+		<dba value="awsdns-13.org" />
+		<dba value="awsdns-14.co.uk" />
+		<dba value="awsdns-14.com" />
+		<dba value="awsdns-14.net" />
+		<dba value="awsdns-14.org" />
+		<dba value="awsdns-15.co.uk" />
+		<dba value="awsdns-15.com" />
+		<dba value="awsdns-15.net" />
+		<dba value="awsdns-15.org" />
+		<dba value="awsdns-16.co.uk" />
+		<dba value="awsdns-16.com" />
+		<dba value="awsdns-16.net" />
+		<dba value="awsdns-16.org" />
+		<dba value="awsdns-17.co.uk" />
+		<dba value="awsdns-17.com" />
+		<dba value="awsdns-17.net" />
+		<dba value="awsdns-17.org" />
+		<dba value="awsdns-18.co.uk" />
+		<dba value="awsdns-18.com" />
+		<dba value="awsdns-18.net" />
+		<dba value="awsdns-18.org" />
+		<dba value="awsdns-19.co.uk" />
+		<dba value="awsdns-19.com" />
+		<dba value="awsdns-19.net" />
+		<dba value="awsdns-19.org" />
+		<dba value="awsdns-20.co.uk" />
+		<dba value="awsdns-20.com" />
+		<dba value="awsdns-20.net" />
+		<dba value="awsdns-20.org" />
+		<dba value="awsdns-21.co.uk" />
+		<dba value="awsdns-21.com" />
+		<dba value="awsdns-21.net" />
+		<dba value="awsdns-21.org" />
+		<dba value="awsdns-22.co.uk" />
+		<dba value="awsdns-22.com" />
+		<dba value="awsdns-22.net" />
+		<dba value="awsdns-22.org" />
+		<dba value="awsdns-23.co.uk" />
+		<dba value="awsdns-23.com" />
+		<dba value="awsdns-23.net" />
+		<dba value="awsdns-23.org" />
+		<dba value="awsdns-24.co.uk" />
+		<dba value="awsdns-24.com" />
+		<dba value="awsdns-24.net" />
+		<dba value="awsdns-24.org" />
+		<dba value="awsdns-25.co.uk" />
+		<dba value="awsdns-25.com" />
+		<dba value="awsdns-25.net" />
+		<dba value="awsdns-25.org" />
+		<dba value="awsdns-26.co.uk" />
+		<dba value="awsdns-26.com" />
+		<dba value="awsdns-26.net" />
+		<dba value="awsdns-26.org" />
+		<dba value="awsdns-27.co.uk" />
+		<dba value="awsdns-27.com" />
+		<dba value="awsdns-27.net" />
+		<dba value="awsdns-27.org" />
+		<dba value="awsdns-28.co.uk" />
+		<dba value="awsdns-28.com" />
+		<dba value="awsdns-28.net" />
+		<dba value="awsdns-28.org" />
+		<dba value="awsdns-29.co.uk" />
+		<dba value="awsdns-29.com" />
+		<dba value="awsdns-29.net" />
+		<dba value="awsdns-29.org" />
+		<dba value="awsdns-30.co.uk" />
+		<dba value="awsdns-30.com" />
+		<dba value="awsdns-30.net" />
+		<dba value="awsdns-30.org" />
+		<dba value="awsdns-31.co.uk" />
+		<dba value="awsdns-31.com" />
+		<dba value="awsdns-31.net" />
+		<dba value="awsdns-31.org" />
+		<dba value="awsdns-32.co.uk" />
+		<dba value="awsdns-32.com" />
+		<dba value="awsdns-32.net" />
+		<dba value="awsdns-32.org" />
+		<dba value="awsdns-33.co.uk" />
+		<dba value="awsdns-33.com" />
+		<dba value="awsdns-33.net" />
+		<dba value="awsdns-33.org" />
+		<dba value="awsdns-34.co.uk" />
+		<dba value="awsdns-34.com" />
+		<dba value="awsdns-34.net" />
+		<dba value="awsdns-34.org" />
+		<dba value="awsdns-35.co.uk" />
+		<dba value="awsdns-35.com" />
+		<dba value="awsdns-35.net" />
+		<dba value="awsdns-35.org" />
+		<dba value="awsdns-36.co.uk" />
+		<dba value="awsdns-36.com" />
+		<dba value="awsdns-36.net" />
+		<dba value="awsdns-36.org" />
+		<dba value="awsdns-37.co.uk" />
+		<dba value="awsdns-37.com" />
+		<dba value="awsdns-37.net" />
+		<dba value="awsdns-37.org" />
+		<dba value="awsdns-38.co.uk" />
+		<dba value="awsdns-38.com" />
+		<dba value="awsdns-38.net" />
+		<dba value="awsdns-38.org" />
+		<dba value="awsdns-39.co.uk" />
+		<dba value="awsdns-39.com" />
+		<dba value="awsdns-39.net" />
+		<dba value="awsdns-39.org" />
+		<dba value="awsdns-40.co.uk" />
+		<dba value="awsdns-40.com" />
+		<dba value="awsdns-40.net" />
+		<dba value="awsdns-40.org" />
+		<dba value="awsdns-41.co.uk" />
+		<dba value="awsdns-41.com" />
+		<dba value="awsdns-41.net" />
+		<dba value="awsdns-41.org" />
+		<dba value="awsdns-42.co.uk" />
+		<dba value="awsdns-42.com" />
+		<dba value="awsdns-42.net" />
+		<dba value="awsdns-42.org" />
+		<dba value="awsdns-43.co.uk" />
+		<dba value="awsdns-43.com" />
+		<dba value="awsdns-43.net" />
+		<dba value="awsdns-43.org" />
+		<dba value="awsdns-44.co.uk" />
+		<dba value="awsdns-44.com" />
+		<dba value="awsdns-44.net" />
+		<dba value="awsdns-44.org" />
+		<dba value="awsdns-45.co.uk" />
+		<dba value="awsdns-45.com" />
+		<dba value="awsdns-45.net" />
+		<dba value="awsdns-45.org" />
+		<dba value="awsdns-46.co.uk" />
+		<dba value="awsdns-46.com" />
+		<dba value="awsdns-46.net" />
+		<dba value="awsdns-46.org" />
+		<dba value="awsdns-47.co.uk" />
+		<dba value="awsdns-47.com" />
+		<dba value="awsdns-47.net" />
+		<dba value="awsdns-47.org" />
+		<dba value="awsdns-48.co.uk" />
+		<dba value="awsdns-48.com" />
+		<dba value="awsdns-48.net" />
+		<dba value="awsdns-48.org" />
+		<dba value="awsdns-49.co.uk" />
+		<dba value="awsdns-49.com" />
+		<dba value="awsdns-49.net" />
+		<dba value="awsdns-49.org" />
+		<dba value="awsdns-50.co.uk" />
+		<dba value="awsdns-50.com" />
+		<dba value="awsdns-50.net" />
+		<dba value="awsdns-50.org" />
+		<dba value="awsdns-51.co.uk" />
+		<dba value="awsdns-51.com" />
+		<dba value="awsdns-51.net" />
+		<dba value="awsdns-51.org" />
+		<dba value="awsdns-52.co.uk" />
+		<dba value="awsdns-52.com" />
+		<dba value="awsdns-52.net" />
+		<dba value="awsdns-52.org" />
+		<dba value="awsdns-53.co.uk" />
+		<dba value="awsdns-53.com" />
+		<dba value="awsdns-53.net" />
+		<dba value="awsdns-53.org" />
+		<dba value="awsdns-54.co.uk" />
+		<dba value="awsdns-54.com" />
+		<dba value="awsdns-54.net" />
+		<dba value="awsdns-54.org" />
+		<dba value="awsdns-55.co.uk" />
+		<dba value="awsdns-55.com" />
+		<dba value="awsdns-55.net" />
+		<dba value="awsdns-55.org" />
+		<dba value="awsdns-56.co.uk" />
+		<dba value="awsdns-56.com" />
+		<dba value="awsdns-56.net" />
+		<dba value="awsdns-56.org" />
+		<dba value="awsdns-57.co.uk" />
+		<dba value="awsdns-57.com" />
+		<dba value="awsdns-57.net" />
+		<dba value="awsdns-57.org" />
+		<dba value="awsdns-58.co.uk" />
+		<dba value="awsdns-58.com" />
+		<dba value="awsdns-58.net" />
+		<dba value="awsdns-58.org" />
+		<dba value="awsdns-59.co.uk" />
+		<dba value="awsdns-59.com" />
+		<dba value="awsdns-59.net" />
+		<dba value="awsdns-59.org" />
+		<dba value="awsdns-60.co.uk" />
+		<dba value="awsdns-60.com" />
+		<dba value="awsdns-60.net" />
+		<dba value="awsdns-60.org" />
+		<dba value="awsdns-61.co.uk" />
+		<dba value="awsdns-61.com" />
+		<dba value="awsdns-61.net" />
+		<dba value="awsdns-61.org" />
+		<dba value="awsdns-62.co.uk" />
+		<dba value="awsdns-62.com" />
+		<dba value="awsdns-62.net" />
+		<dba value="awsdns-62.org" />
+		<dba value="awsdns-63.co.uk" />
+		<dba value="awsdns-63.com" />
+		<dba value="awsdns-63.net" />
+		<dba value="awsdns-63.org" />
+	</company>
+	<company name="thawte">
+		<dba value="thawte consulting cc" />
+		<dba value="thawte consulting (pty) ltd." />
+	</company>
+	<company name="1 and 1">
+		<dba value="1 &amp; 1 internet ag" />
+		<dba value="1and1.com" />
+		<dba value="1&amp;1 internet inc." />
+		<dba value="ONEANDONE-AS 1&amp;1 Internet AG" />
+		<dba value="1and1.co.uk" />
+		<dba value="1and1.fr" />
+	</company>
+	<company name="Gandi SAS">
+		<dba value="gandi sas" />
+		<dba value="gandi.net" />
+		<dba value="dns.gandi.net" />
+	</company>
+	<company name="DigiCert">
+		<dba value="digicert inc" />
+	</company>
+	<company name="WebFaction">
+		<dba value="webfaction.com" />
+		<dba value="webfaction" />
+	</company>
+	<company name="Safenames">
+		<dba value="safenames ltd" />
+	</company>
+	<company name="Media Temple">
+		<dba value="media temple, inc." />
+		<dba value="mediatemple.net" />
+	</company>
+	<company name="Dynadot">
+		<dba value="dynadot, llc" />
+	</company>
+	<company name="AOL">
+		<dba value="aol transit data network" />
+		<dba value="aol, llc" />
+		<dba value="aol.com" />
+	</company>
+	<company name="pair Networks">
+		<dba value="pair networks" />
+		<dba value="pair.com" />
+	</company>
+	<company name="Go Daddy">
+		<dba value="domaincontrol.com" />
+		<dba value="godaddy.com" />
+		<dba value="godaddy.com, inc." />
+		<dba value="godaddy.com, llc" />
+		<dba value="secureserver.net" />
+		<dba value="wild west domains, inc." />
+		<dba value="starfield technologies, inc." />
+	</company>
+	<company name="DNS Made Easy">
+		<dba value="dnsmadeeasy.com" />
+	</company>
+	<company name="Yahoo!">
+		<dba value="yahoo.com" />
+		<dba value="inktomi corporation" />
+		<dba value="altavista company" />
+	</company>
+	<company name="Savvis">
+		<dba value="savvis" />
+		<dba value="savvis.net" />
+	</company>
+	<company name="Melbourne IT">
+		<dba value="melbourne it, ltd. d/b/a internet names worldwide" />
+	</company>
+	<company name="easyDNS">
+		<dba value="easydns technologies, inc." />
+		<dba value="easydns.com" />
+		<dba value="easydns.net" />
+		<dba value="easydns.org" />
+	</company>
+	<company name="ATT">
+		<dba value="at&amp;t enhanced network services" />
+		<dba value="at&amp;t internet services" />
+		<dba value="att.net" />
+	</company>
+	<company name="Tucows">
+		<dba value="tucows inc." />
+		<dba value="tucows.com co." />
+	</company>
+	<company name="pairNIC">
+		<dba value="pairnic" />
+	</company>
+	<company name="Google">
+		<dba value="aspmx.l.google.com" />
+		<dba value="google.com" />
+		<dba value="googlemail.com" />
+		<dba value="l.google.com" />
+		<dba value="google" />
+		<dba value="google inc." />
+		<dba value="postini" />
+	</company>
+	<company name="DomainDiscover">
+		<dba value="domaindiscover" />
+		<dba value="domaindiscover.com" />
+	</company>
+	<company name="AIT">
+		<dba value="advanced internet technologies, inc." />
+	</company>
+	<company name="ServerBeach">
+		<dba value="serverbeach" />
+	</company>
+	<company name="Microsoft">
+		<dba value="msft.net" />
+		<dba value="microsoft.com" />
+		<dba value="microsoft corp" />
+	</company>
+	<company name="eNom">
+		<dba value="emailsrvr.com" />
+		<dba value="enom, inc." />
+		<dba value="enom, incorporated" />
+		<dba value="messagingengine.com" />
+		<dba value="name-services.com" />
+		<dba value="registrar-servers.com" />
+	</company>
+	<company name="Comodo Group">
+		<dba value="comodo ca limited" />
+		<dba value="the usertrust network" />
+	</company>
+	<company name="Neustar (UltraDNS)">
+		<dba value="ultradns.info" />
+		<dba value="ultradns.net" />
+		<dba value="ultradns.org" />
+		<dba value="ultradns.co.uk" />
+	</company>
+	<company name="Google (Postini)">
+		<dba value="psmtp.com" />
+	</company>
+	<company name="IAC Search and Media">
+		<dba value="iac search media inc" />
+	</company>
+	<company name="DomainPeople">
+		<dba value="domainpeople, inc." />
+	</company>
+	<company name="NetNames">
+		<dba value="group nbt plc aka netnames" />
+	</company>
+	<company name="Equifax">
+		<dba value="equifax secure inc." />
+		<dba value="equifax" />
+	</company>
+	<company name="Corporation Service Company">
+		<dba value="csc corporate domains, inc." />
+	</company>
+	<company name="VeriSign">
+		<dba value="verisign trust network" />
+		<dba value="verisign, inc." />
+	</company>
+	<company name="GeoTrust">
+		<dba value="geotrust, inc." />
+	</company>
+	<company name="Rackspace">
+		<dba value="rackspace.com" />
+		<dba value="rackspace.com, ltd." />
+		<dba value="rackspace hosting" />
+		<dba value="stabletransit.com" />
+	</company>
+	<company name="Slicehost">
+		<dba value="slicehost llc" />
+		<dba value="slicehost.net" />
+	</company>
+	<company name="Internap">
+		<dba value="pnap.net" />
+		<dba value="internap network services corporation" />
+	</company>
+	<company name="Dotster">
+		<dba value="dotster, inc." />
+	</company>
+	<company name="Akamai">
+		<dba value="akam.net" />
+		<dba value="akamai technologies" />
+		<dba value="akamai technologies, inc." />
+	</company>
+	<company name="Domain Bank">
+		<dba value="dstr acquisition pa i, llc dba domainbank.com" />
+	</company>
+	<company name="Nettica">
+		<dba value="nettica.com" />
+		<dba value="nettica domains, inc." />
+	</company>
+	<company name="Hurricane Electric">
+		<dba value="hurricane electric, inc." />
+	</company>
+	<company name="DreamHost">
+		<dba value="new dream network, llc" />
+		<dba value="dreamhost.com" />
+	</company>
+	<company name="Zerigo">
+		<dba value="zerigo.net" />
+	</company>
+	<company name="Linode">
+		<dba value="linode" />
+		<dba value="linode.com" />
+		<dba value="global net access, llc" />
+	</company>
+	<company name="CloudFlare">
+		<dba value="cloudflare.com" />
+		<dba value="cloudflare, inc." />
+	</company>
+	<company name="Joker.com">
+		<dba value="csl computer service langenbach gmbh d/b/a joker.com" />
+	</company>
+	<company name="Mailgun">
+		<dba value="mailgun.org" />
+	</company>
+	<company name="Name.com">
+		<dba value="name.com" />
+		<dba value="name.com llc" />
+	</company>
+	<company name="Moniker">
+		<dba value="moniker online services, inc." />
+	</company>
+	<company name="Black Lotus">
+		<dba value="black lotus communications" />
+	</company>
+	<company name="DNS issue">
+		<dba value="opendns, llc" />
+	</company>
+	<company name="Directi Internet Solutions">
+		<dba value="DIRECTI INTERNET SOLUTIONS PVT. LTD. D/B/A PUBLICDOMAINREGISTRY.COM" />
+		<dba value="Directi Internet Solutions Pvt. Ltd. d/b/a PublicDomainRegistry.com" />
+		<dba value="Directi Internet Solutions Pvt. Ltd. dba PublicDomainRegistry.com" />
+		<dba value="Directi Internet Solutions Pvt. Ltd. DBA" />
+		<dba value="Directi Internet Solutions d/b/a PublicDomainRegistry.com R28-ME" />"
+	</company>
+	<company name="Fasthosts Internet Ltd">
+		<dba value="Fasthosts Internet Ltd [Tag = LIVEDOMAINS]        URL: http://www.fasthosts.co.uk" />
+	</company>
+	<company name="Symantec">
+		<dba value="messagelabs" />
+	</company>
+	<company name="OVH Systems">
+		<dba value="ovh.net" />
+	</company>
+</lookups>

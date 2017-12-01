@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A339C265-0C65-4AAF-A2D2-FA870779633C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Drone.Crunchbase</RootNamespace>
+    <AssemblyName>Drone.Crunchbase</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Drone.Manager\Properties\AssemblyInfoCommon.cs">
+      <Link>Properties\AssemblyInfoCommon.cs</Link>
+    </Compile>
+    <Compile Include="Components\Crunch.cs" />
+    <Compile Include="Datasources\CrunchbaseDataSource.cs" />
+    <Compile Include="Datasources\CrunchbaseTestDataSource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Drone.API.Crunchbase\Drone.API.Crunchbase.csproj">
+      <Project>{c2504cd2-0d8b-4cdc-9ffb-f377348b1107}</Project>
+      <Name>Drone.API.Crunchbase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.API.Dig\Drone.API.Dig.csproj">
+      <Project>{77742dd2-f292-4b7e-ab50-457453d6b0c8}</Project>
+      <Name>Drone.API.Dig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Core\Drone.Core.csproj">
+      <Project>{724fae18-ed6d-4625-ac6b-2a4041a8fc0e}</Project>
+      <Name>Drone.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Crunchbase\Drone.Entities.Crunchbase.csproj">
+      <Project>{6e973b8b-e867-49d9-89e6-30201cf473e9}</Project>
+      <Name>Drone.Entities.Crunchbase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.WebAPI\Drone.Entities.WebAPI.csproj">
+      <Project>{bdce53b0-1f96-410f-a6c1-778d0649b572}</Project>
+      <Name>Drone.Entities.WebAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Shared\Drone.Shared.csproj">
+      <Project>{2a9965dd-1b4b-4254-95e1-6c68eb2d3626}</Project>
+      <Name>Drone.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Xml\crunchbasecomponent.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

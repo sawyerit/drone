@@ -1,0 +1,5 @@
+﻿<api>
+	<apiurl>http://api.crunchbase.com/v/1</apiurl>
+	<apikey>6e5bh3zj4cxf6ugx3qrv2cjv</apikey>
+	<verboselogging>true</verboselogging>
+</api>

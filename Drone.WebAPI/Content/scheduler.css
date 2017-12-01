@@ -1,0 +1,175 @@
+﻿body {
+    background-color: #3E3E42;
+    font-size: smaller;
+}
+
+#body {
+    margin: auto;
+}
+
+.page-title {
+    color: white;
+    padding-left: 20px;
+    text-align:center;
+}
+
+.detail {
+    width: 600px;
+}
+
+
+
+/* summary box contents*/
+#job-summary, #job-detail {
+    width: 800px;
+}
+
+    #job-summary tr:nth-child(odd) {
+        background-color: #eee;
+    }
+
+    #job-summary tr:nth-child(even) {
+        background-color: #fff;
+    }
+
+    #job-summary tr:hover {
+        background-color: gray;
+        cursor: pointer;
+        color: white;
+    }
+
+/* Grid header rows*/
+.job-headerrow {
+    font-size: larger;
+    color: white;
+}
+
+    .job-headerrow td {
+        padding-left: 5px;
+        background-color: #1DA9E0;
+        text-align: center;
+    }
+
+
+
+/*summary box contents row items*/
+.job-item {
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+
+/*summary & detail menus*/
+#job-summary-menudiv, #job-summary-menutable {
+    width: 125px;
+}
+
+#job-summary-menudiv, #job-detail-menudiv {
+    margin-left: 15px;
+}
+
+#job-detail-menudiv, #job-detail-menutable {
+    width: 125px;
+}
+
+.menu-img {
+    width: 35px;
+}
+
+
+
+/*container box and inset*/
+.container {
+    margin: auto;
+    width: 1040px;
+    border-radius: 10px;
+    background-color: #C1C1C1;
+    padding: 5px;
+    color: black;
+    border: 1px solid #828282;
+    padding-bottom: 8px;
+}
+
+.container-header {
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-left: 15px;
+}
+
+.insetdiv {
+    box-shadow: inset 2px 2px 3px 0 #3A3A3A;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 8px;
+}
+
+#job-detail, #job-detail-div {
+    width: 800px;
+}
+
+
+
+/* other */
+
+.b {
+    font-weight: bold;
+}
+
+.sep {
+    height: 1px;
+    width: 100%;
+    background-color: darkgrey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.error td {
+    background-color: darkred;
+}
+
+.Ready {
+    color:darkgreen;
+}
+.Disabled {
+    color:darkgray;
+}
+.Failed {
+    color:red;
+}
+
+.chosen {
+    background-color: gray;
+    cursor: pointer;
+    color: white;
+}
+
+.action {
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+.grayimg {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+            cursor: default; 
+}
+
+.borderdiv {
+    border-radius: 6px;
+    border:1px solid darkgrey;
+    padding-left:5px;
+    margin-bottom:10px;
+}
+
+.showcron {
+    border:1px solid black;
+    width:125px;
+    padding:3px;
+    text-align:center;
+    background-color: #1DA9E0;
+    color:white;
+    margin-top:10px;
+}

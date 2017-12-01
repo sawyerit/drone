@@ -1,0 +1,55 @@
+﻿body
+{
+	background-color:#4D4D4D;
+	font-size:smaller;
+}
+a
+{
+	color:white;
+}
+.header
+{
+	color:white;
+	padding-left:10px;
+}
+
+.content_section
+{
+	border-radius: 10px; 
+	background-color: #000000; 
+	padding-left: 10px; 
+	margin-left: 10px; 
+	margin-right: 15px;
+	color:white;
+	padding-bottom:10px;
+}
+
+.svc_header
+{
+	border-radius: 10px; 
+	background-color: #232323; 
+	padding: 5px; 
+	padding-left: 10px; 
+	margin-left: 10px; 
+	margin-right: 15px;
+	color:darkgrey;
+	border:1px solid #828282;
+}
+
+.stopped
+{
+	color:lightgrey;
+	background-color:#484848;
+}
+
+.running
+{
+	color:white;
+	background-color:#718B39;
+}
+
+.title
+{
+	color:lightgray;
+	padding:2px;
+}

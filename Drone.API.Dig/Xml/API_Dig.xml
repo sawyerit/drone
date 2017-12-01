@@ -1,0 +1,4 @@
+﻿<api>
+	<registryserviceurl>http://whois.godaddy.com/whoischeck.asp?domain={0}&amp;querytype=4|http://g1twregcheck01/monitor/registryWhoIs.asp?domain={0}</registryserviceurl>
+</api>
+<!-- http://whois.godaddy.com/whoischeck.asp?domain={0}&amp;querytype=3 http://regcheck.prod.phx3.gdg/monitor/registryWhoIs.asp?domain={0}| http://g1twregcheck01/monitor/registryWhoIs.asp -->

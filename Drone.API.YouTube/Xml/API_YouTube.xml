@@ -1,0 +1,5 @@
+﻿<api>
+	<apiuploadsurl>http://gdata.youtube.com/feeds/api/users/{0}/uploads?orderby=published</apiuploadsurl>
+	<apichannelurl>http://gdata.youtube.com/feeds/api/users/{0}</apichannelurl>
+	<apivideosurl>http://gdata.youtube.com/feeds/api/videos/{0}</apivideosurl>
+</api>

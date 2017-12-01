@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4ADB4F4-21EA-4DA9-BEF3-D8ED137386A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Drone.QueueProcessor</RootNamespace>
+    <AssemblyName>Drone.QueueProcessor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Drone.Manager\Properties\AssemblyInfoCommon.cs">
+      <Link>Properties\AssemblyInfoCommon.cs</Link>
+    </Compile>
+    <Compile Include="Components\QueuePortfolio.cs" />
+    <Compile Include="Components\QueueYouTube.cs" />
+    <Compile Include="Components\QueueTwitter.cs" />
+    <Compile Include="Components\QueueMarketShare.cs" />
+    <Compile Include="Components\QueueFacebook.cs" />
+    <Compile Include="Components\QueueCrunchbase.cs" />
+    <Compile Include="Components\QueueProcessorComponent.cs" />
+    <Compile Include="Components\QueueProcessor.cs" />
+    <Compile Include="Datasources\PortfolioBulkDataSource.cs" />
+    <Compile Include="Datasources\MarketShareBulkDataSource.cs" />
+    <Compile Include="Datasources\CrunchbaseDataSource.cs" />
+    <Compile Include="Datasources\FacebookDataSource.cs" />
+    <Compile Include="Datasources\MarketShareDataSource.cs" />
+    <Compile Include="Datasources\TwitterDataSource.cs" />
+    <Compile Include="Datasources\TwitterTrendDataSource.cs" />
+    <Compile Include="Datasources\TwitterUserDataSource.cs" />
+    <Compile Include="Datasources\YouTubeDataSource.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Drone.Core\Drone.Core.csproj">
+      <Project>{724fae18-ed6d-4625-ac6b-2a4041a8fc0e}</Project>
+      <Name>Drone.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Data.Queue\Drone.Data.Queue.csproj">
+      <Project>{ac54ad63-6193-4049-b29a-d197771d165b}</Project>
+      <Name>Drone.Data.Queue</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Data\Drone.Data.csproj">
+      <Project>{5c871e84-b68b-4a31-826a-d902f5c7fba1}</Project>
+      <Name>Drone.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Crunchbase\Drone.Entities.Crunchbase.csproj">
+      <Project>{6e973b8b-e867-49d9-89e6-30201cf473e9}</Project>
+      <Name>Drone.Entities.Crunchbase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Facebook\Drone.Entities.Facebook.csproj">
+      <Project>{204bb520-11e7-4f1b-a833-ae9938e85e5d}</Project>
+      <Name>Drone.Entities.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.MarketShare\Drone.Entities.MarketShare.csproj">
+      <Project>{7f550d4b-8b0a-4682-afda-5fb22472b781}</Project>
+      <Name>Drone.Entities.MarketShare</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Portfolio\Drone.Entities.Portfolio.csproj">
+      <Project>{6f6e82aa-6a02-4e95-9ddf-ce7c8bdb7c1c}</Project>
+      <Name>Drone.Entities.Portfolio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.Twitter.v11\Drone.Entities.Twitter.v11.csproj">
+      <Project>{e1c2e738-c4f6-407e-92a4-26a71ff102da}</Project>
+      <Name>Drone.Entities.Twitter.v11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Entities.YouTube\Drone.Entities.YouTube.csproj">
+      <Project>{1040cec2-fdce-4e6b-9973-0afe94f21671}</Project>
+      <Name>Drone.Entities.YouTube</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Drone.Shared\Drone.Shared.csproj">
+      <Project>{2a9965dd-1b4b-4254-95e1-6c68eb2d3626}</Project>
+      <Name>Drone.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Xml\queueprocessorcomponent.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BILogger.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BILogger.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://g1twrptweb003/BILoggerService/BILoggerService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/BILogger.Enums" />
+  <xs:complexType name="BIException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InnerException" nillable="true" type="tns:BIException" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BILogger.Enums" minOccurs="0" name="LogAction" type="q1:LogActionEnum" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BILogger.Enums" minOccurs="0" name="LogType" type="q2:LogTypeEnum" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Server" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BIException" nillable="true" type="tns:BIException" />
+</xs:schema>

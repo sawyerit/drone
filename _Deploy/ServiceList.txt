@@ -1,0 +1,4 @@
+Drone.Service.exe
+Drone.Manager.dll
+Drone.Core.dll
+Drone.Shared.dll

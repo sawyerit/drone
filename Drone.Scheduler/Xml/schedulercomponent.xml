@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<accounts>
+	<account>
+		<name>GoDaddy</name>
+		<id>none</id>
+		<isenabled>true</isenabled>
+    <!-- all nodes in the cluster, only one can be primary -->
+    <node>
+      <host>p3pwsvcweb001</host>
+      <priority>primary</priority>
+    </node>
+    <node>
+      <host>p3pwsvcweb002</host>
+      <priority>secondary</priority>
+    </node>
+  </account>
+</accounts>

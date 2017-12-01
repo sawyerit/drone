@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<accounts>
+	<account>
+		<name>GoDaddy</name>
+		<id>none</id>
+		<isenabled>true</isenabled>
+		<nextruninterval>86400</nextruninterval><!-- base interval, if not defined in component below (in seconds) -->
+		<apiuri>http://bizintel-ws.intranet.gdg/bidata/api/crunchbase</apiuri>
+		<token>
+			<accesstoken></accesstoken>
+			<accesstokensecret></accesstokensecret>
+			<consumerkey></consumerkey>
+			<consumersecret></consumersecret>
+		</token>
+		<crunch><!-- for follower counts -->
+			<interval>saturday</interval> <!-- 15, 60, 1440 (full day), daily, weekly, sunday, monday, tuesday, wed etc.-->
+			<isenabled>true</isenabled>
+			<maxparallel>4</maxparallel>
+			<verboselogging>false</verboselogging>
+		</crunch>
+	</account>
+</accounts>

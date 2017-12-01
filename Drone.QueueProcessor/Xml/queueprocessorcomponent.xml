@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<accounts>
+	<account>
+		<name>GoDaddy</name>
+		<id>none</id>
+		<isenabled>true</isenabled>
+		<nextruninterval>300</nextruninterval><!-- seconds -->
+		<queueprocessor>
+			<verboselogging>false</verboselogging>
+		</queueprocessor>
+		<queuecrunchbase>
+			<verboselogging>false</verboselogging>
+		</queuecrunchbase>
+		<queuefacebook>
+			<verboselogging>false</verboselogging>
+		</queuefacebook>
+		<queuemarketshare>
+			<bulklimit>100</bulklimit>
+			<bulktimer>5000</bulktimer>
+			<verboselogging>false</verboselogging>
+		</queuemarketshare>
+		<queueportfolio>
+			<bulklimit>100</bulklimit>
+			<bulktimer>5000</bulktimer>
+			<verboselogging>false</verboselogging>
+		</queueportfolio>
+		<queuetwitter>
+			<verboselogging>false</verboselogging>
+		</queuetwitter>
+		<queueyoutube>
+			<verboselogging>false</verboselogging>
+		</queueyoutube>
+	</account>
+</accounts>

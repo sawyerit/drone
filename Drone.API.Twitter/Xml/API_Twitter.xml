@@ -1,0 +1,4 @@
+﻿<api>
+	<apiurl>https://api.twitter.com/1.1</apiurl>
+	<searchurl>https://api.twitter.com/1.1/search</searchurl>
+</api>

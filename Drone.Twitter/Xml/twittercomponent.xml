@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<accounts>
+	<account>
+		<name>GoDaddy</name>
+		<id>14949454</id>
+		<isenabled>true</isenabled>
+		<nextruninterval>600</nextruninterval>
+		<!-- in seconds -->
+		<!-- SB 120 (lower than 60 will cause to be rate limited) -->
+		<apiuri>http://bizintel-ws.intranet.gdg/bidata/api/twitter</apiuri>		
+		<!--<apiuri>http://localhost:63222/api/twitter</apiuri>-->
+		<commonapiuri>http://bizintel-ws.intranet.gdg/bidata/api/common</commonapiuri>
+		<token>
+			<accesstoken>34422165-AX857owpzguiz3VDR8vGRwMFnkHui5uScvY4Wz14S</accesstoken>
+			<accesstokensecret>j9tvic7h06YjsVho63cWClGIYftke1VZnfUUOvQ2UWs</accesstokensecret>
+			<consumerkey>NpLjJyElMnLjjRSAQJY32w</consumerkey>
+			<consumersecret>EGsNBPubMGh8iAsMYeorJyAOimoYzOcd7K1BBtl9kM</consumersecret>
+		</token>
+		<mentionsreplies>
+			<countperpage>200</countperpage>
+			<pagecount>1</pagecount>
+			<isenabled>false</isenabled>
+		</mentionsreplies>
+		<twitter>
+			<countperpage>100</countperpage>
+			<!-- SB 100 -->
+			<pagecount>5</pagecount>
+			<!-- SB 5 to 15 -->
+			<usesinceid>true</usesinceid>
+			<isenabled>true</isenabled>
+		</twitter>
+		<twitteruser>
+			<!-- for follower counts -->
+			<interval>1440</interval>
+			<!-- 15, 60, 1440 (full day)-->
+			<isenabled>true</isenabled>
+		</twitteruser>
+		<twittertrend>
+			<interval>10</interval>
+			<isenabled>false</isenabled>
+		</twittertrend>
+		<twitterfollower>
+			<!-- for follower counts -->
+			<interval>1440</interval>
+			<!-- 15, 60, 1440 (full day)-->
+			<isenabled>true</isenabled>
+		</twitterfollower>
+	</account>
+</accounts>

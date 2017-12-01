@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+	<Product name="wix">
+		<!-- courtneytidman.co.uk -->
+		<Rules>
+			<Or>
+				<Rule type="urls" property="address" value="wix.com" />
+				<Rule type="generators" property="content" value="wix" />
+				<Rule type="metas" property="http-equiv" value="x-wix"  />
+				<And mincount="2">
+					<Rule type="atags" property="href" value="wix" />
+					<Rule type="stylesheets" property="href" value="wix.com" />
+					<Rule type="links" property="href" value="wix.com" />
+					<Rule type="scripts" property="src" value="wix.com" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="weebly">
+		<!-- mobiledjsampler.com/ -->
+		<Rules>
+			<Or>
+				<Rule type="urls" property="address" value="weebly" />
+				<Rule type="generators" property="content" value="weebly" />
+				<Rule type="metas" property="content" value="weebly.com" />
+				<And mincount="2">
+					<Rule type="stylesheets" property="href" value="cdn1.editmysite.com" />
+					<Rule type="scripts" property="src" value="cdn1.editmysite.com" />
+					<Rule type="atags" property="href" value="cdn1.editmysite.com" />
+					<Rule type="text" property="html" value="wsite-" />
+					<Rule type="text" property="html" value="weebly-" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="webs">
+		<!-- abmwindowcleaning.com -->
+		<Rules>
+			<Or>
+				<Rule type="urls" property="address" value=".webs.com" />
+				<Rule type="urls" property="address" value="freewebs.com" />
+				<And mincount="2">
+					<Rule type="stylesheets" property="href" value="static.websimages.com" />
+					<Rule type="scripts" property="src" value="static.websimages.com" />
+					<Rule type="text" property="html" value="weebly" />
+				</And>
+				<Rule type="cookies" property="name" value="fwww" />
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="yola">
+		<!-- zumbahamilton.ca/ -->
+		<Rules>
+			<Or>
+				<Rule type="urls" property="address" value="yolasite.com" />
+				<And mincount="1">
+					<Rule type="text" property="html" value="analytics.yola" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="1and1">
+		<!-- .com -->
+		<Rules>
+			<Or>
+				<Rule type="atags" property="href" value="http://cms01.initial-website.com/app/cms/logout.php" ignoreAbsURI="true" />
+				<Rule type="text" property="href" value="This website was created using &lt;a href=&quot;http://mybusiness.1and1.com&quot; target=&quot;_blank&quot;&gt;1&amp;1 MyBusiness Site&lt;/a&gt;" />
+				<Rule type="text" property="html" value="window.jQuery_1and1" />
+				<And mincount="2">
+					<Rule type="scripts" property="src" value="initial-website.com" />
+					<Rule type="images" property="src" value="initial-website.com" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="jimdo">
+		<!-- bikewrappers.com -->
+		<Rules>
+				<And mincount="2">
+					<Rule type="text" property="html" value="jimdoData" />
+					<Rule type="links" property="href" value="jimdo.com" ignoreAbsURI="true" />
+					<Rule type="atags" property="href" value="jimdo.com" />
+					<Rule type="images" property="src" value="jimdo.com" ignoreAbsURI="true" />
+				</And>
+		</Rules>
+	</Product>
+	<!--<Product name="silverstripe">
+		<Rules>
+			<Or>
+				<Rule type="generators" property="content" value="silverstripe" />
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="sharepoint">
+		<Rules>
+			<Or>
+				<Rule type="generators" property="content" value="sharepoint" />
+			</Or>
+		</Rules>
+	</Product>-->
+	<!--<Product name="blogger">
+		-->
+	<!-- www.bloggerbuster.com/ -->
+	<!--
+		<Rules>
+			<Or>
+				<Rule type="urls" property="address" value="blogspot.com" />
+				<Rule type="generators" property="content" value="blogger" />
+				<And mincount="2">
+					<Rule type="stylesheets" property="href" value="blogger.com" />
+					<Rule type="atags" property="href" value="'//www.blogger.com/"/>
+					<Rule type="links" property="href" value="'//www.blogger.com/"/>
+					<Rule type="atags" property="href" value="'/feeds/posts/"/>
+					<Rule type="links" property="href" value="'/feeds/posts/"/>
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="dot net nuke">
+		-->
+	<!-- www.invitedtoliveunited.org/ -->
+	<!--
+		<Rules>
+			<Or>
+				<Rule type="generators" property="content" value="dotnetnuke" />
+				<Rule type="text" property="html" value="DotNetNuke - http://www.dotnetnuke.com"/>
+				<And mincount="2">
+					<Rule type="scripts" property="src" value="dnn.js" />
+					<Rule type="scripts" property="src" value="dnncore.js" />
+					<Rule type="atags" property="href" value="/portals/_default/" />
+					<Rule type="links" property="href" value="/portals/_default/" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="yahoo site builder">
+		-->
+	<!-- www.desiretoinspire.net/ -->
+	<!--
+		<Rules>
+			<Or>
+				<Rule type="generators" property="content" value="yahoo!" />
+				<And mincount="2">
+					<Rule type="text" property="html" value="visit.webhosting.yahoo.com" />
+					<Rule type="images" property="src" value="sitebuilder/images/" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="website tonight">
+		-->
+	<!-- gourmetgoodiesbyalisha.com/ -->
+	<!--
+		<Rules>
+			<Or>
+				<Rule type="generators" property="content" value="Starfield Technologies" />
+				<Rule type="generators" property="content" value="Go Daddy" />
+				<Rule type="generators" property="content" value="WebSite Tonight" />
+				<And mincount="2">
+					<Rule type="images" property="src" value="gd_black.gif" />
+					<Rule type="atags" property="href" value="www.godaddy.com" />
+				</And>
+			</Or>
+		</Rules>
+	</Product>
+	<Product name="wordpress">
+		-->
+	<!-- www.biritemarket.com/ -->
+	<!--
+		<Rules>
+			<Or>
+				<Rule type="generators" property="content" value="wordpress" />
+				<Rule type="scripts" property="src" value="wp-includes" />
+				<Rule type="stylesheets" property="href" value="wp-content" />
+				<And mincount="2">
+					<Rule type="images" property="src" value="wp-content" />
+					<Rule type="text" property="html" value="wp-content" />
+				</And>
+				<Rule type="adminurls" property="wp-login" value="wp-login.php" />				
+			</Or>
+		</Rules>
+	</Product>-->
+	<Product name="joomla">
+	
+	<!-- www.stickybrainstorming.com/ -->
+	
+		<Rules>
+			<Or>
+				<Rule type="generators" property="content" value="joomla" />
+				<Rule type="stylesheets" property="href" value="joomla.css" />
+				<And mincount="3">
+					<Rule type="images" property="src" value="/templates/" />
+					<Rule type="stylesheets" property="href" value="/templates/" />
+					<Rule type="scripts" property="src" value="/templates/" />
+					<Rule type="atags" property="href" value="joomla" />
+				</And>
+				<Rule type="adminurls" property="joomla" value="administrator" />
+			</Or>
+		</Rules>
+	</Product>
+	<!--<Product name="drupal">-->
+	
+	<!-- www.ubuntu.com -->
+	<!--
+		<Rules>
+			<Or>
+				<Rule type="text" property="html" value="/sites/{domain}"/>
+				<Rule type="generators" property="content" value="Drupal" />
+				<Rule type="scripts" property="src" value="drupal.js" />
+				<And mincount="2">
+					<Rule type="atags" property="href" value="/user" />
+					<Rule type="text" property="html" value="Drupal.settings" />
+					<Rule type="text" property="html" value="/sites/{domain}"/>
+					<Rule type="stylesheets" property="href" value="/sites/default" />
+				</And>
+				<Rule type="adminurls" property="drupal" value="user" />				
+			</Or>
+		</Rules>
+	</Product>-->
+</Products>

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Documentation>
+	<WebAPI>
+		<API>
+			<Type>GET</Type>
+			<Category>Common</Category>
+			<RelativeUrl>bidata/api/common/competitors</RelativeUrl>
+			<Description>Gets all competitors and their social media ids.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/common/competitors</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Common</Category>
+			<RelativeUrl>bidata/api/common/competitors/{id}</RelativeUrl>
+			<Description>Gets a competitor by id and their social media ids.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/common/competitors/2</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Crunchbase</Category>
+			<RelativeUrl>bidata/api/crunchbase</RelativeUrl>
+			<Description>Gets all crunchbase entries.</Description>
+			<Usage>http://localhost/bidata/api/crunchbase</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Crunchbase</Category>
+			<RelativeUrl>bidata/api/crunchbase/domainname</RelativeUrl>
+			<Description>Gets a specific crunchbase entry.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/crunchbase/stitcher.com</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>Crunchbase</Category>
+			<RelativeUrl>bidata/api/crunchbase</RelativeUrl>
+			<Description>Creates the company object from the JSON page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/crunchbase/<br /> 
+				<b>Sample JSON object:</b> <br />
+				{"name":"test company","permalink":"test-company","crunchbase_url":null,"homepage_url":"testcompany.com","ip_address":null,"blog_url":null,"blog_feed_url":null,"twitter_username":"fake name","category_code":null,"number_of_employees":null,"founded_year":null,"founded_month":null,"founded_day":null,"email_address":null,"phone_number":"555-1212","description":null,"created_at":null,"updated_at":null,"overview":null,"total_money_raised":null,"funding_rounds":null,"records":{"WebHost":"GoDaddy","EmailHost":"None","DNSHost":"GoDaddy","Registrar":"GoDaddy","SSLIssuer":"None","CertificateType":"None"}}
+				]]>
+			</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Domains</Category>
+			<RelativeUrl>bidata/api/domains?count={n}</RelativeUrl>
+			<Description>Get specific number of portfolio domains for processing</Description>
+			<Usage>http://localhost/bidata/api/domains?count=10</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Domains</Category>
+			<RelativeUrl>bidata/api/domains?count={n}&amp;mask={n}</RelativeUrl>
+			<Description>Get specific number of domains for processing by bitmask</Description>
+			<Usage>http://localhost/bidata/api/domains?count=10&amp;mask=4</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>Domains</Category>
+			<RelativeUrl>bidata/api/domains</RelativeUrl>
+			<Description>Creates the domain object from the JSON page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/domains/<br /> 
+				<b>Sample JSON object:</b> <br />
+				{"Uri":"http://mydomainname.com/","DomainId":999,"DomainName":"mydomainname.com","DomainAttributes":{"WebHost":"GoDaddy","EmailHost":"Google","Category":"Ninjas, Monkeys"}}]]>
+			</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Facebook</Category>
+			<RelativeUrl>bidata/api/facebook</RelativeUrl>
+			<Description>Gets all information for facebook pages we collect. GoDaddy's page as well as competitors.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/facebook</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Facebook</Category>
+			<RelativeUrl>bidata/api/facebook/{facebookid}</RelativeUrl>
+			<Description>Gets information for a specific facebook account.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/facebook/godaddy</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>Facebook</Category>
+			<RelativeUrl>bidata/api/facebook/page</RelativeUrl>
+			<Description>Creates a facebook page object from the JSON page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/facebook/page <br /> 
+				<b>Sample JSON object:</b> <br />
+				{"Id":"14240968757","Name":"Test Facebook Page","Link":null,"Category":"Test Category","Website":"Test Page Url","Username":null,"Talking_About_Count":12,"Likes":152}
+				]]>
+			</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>Facebook</Category>
+			<RelativeUrl>bidata/api/facebook/country</RelativeUrl>
+			<Description>Creates a facebook country demographic object from the JSON page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/facebook/country <br /> 
+				<b>Sample JSON object:</b> <br />
+				{"Data":[{"id":"8749090685/insights/page_fans_country/lifetime","Name":"page_fans_country","Days":[{"Gender":null,"Country":{"US":116655,"IN":17624,"CA":4524,"TH":4080,"GB":2929,"ID":3456,"TR":2446,"EG":4000,"PH":2517,"AU":2593,"PK":2705,"MX":2316,"MY":1317,"VN":3196,"CO ":1162,"IT":757,"PE":1185,"CN":808,"SA":826,"RO":729,"BD":1896,"NG":1074,"LK":1159,"ES":589,"AE":557,"DE":478,"IL":535,"PT":496,"BR":816,"SG":413,"C R":460,"AR":447,"BG":400,"JO":459,"HK":340,"RS":400,"FR":404,"TW":437,"MA":551,"RU":281,"VE":0,"HU":0,"GR":0,"TN":311,"KR":0},"Locale":null,"End_Time":"2013-03-11T08:00:00+0000"},{"Gender":null,"Country":{"US":116693,"IN":17636,"CA":4528,"TH":4079,"EG":4004,"ID":3455,"VN":3195,"GB":2926,"PK":2702,"AU":2591,"PH":2512,"TR":2440,"MX":2324,"BD":1896,"MY ":1315,"PE":1186,"CO":1165,"LK":1161,"NG":1071,"SA":828,"BR":821,"CN":804,"IT":757,"RO":729,"ES":592,"AE":559,"MA":550,"IL":535,"PT":496,"DE":478,"CR ":460,"JO":459,"AR":447,"TW":436,"SG":413,"FR":405,"BG":401,"RS":401,"HK":339,"TN":311,"RU":282,"VE":0,"HU":0,"GR":0,"KR":0},"Locale":null,"End_Time":"2013-03-12T07:00:00+0000"}]}]}
+				]]>
+			</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>MarketShare</Category>
+			<RelativeUrl>bidata/api/marketshare</RelativeUrl>
+			<Description>Gets all marketshare information we collect.</Description>
+			<Usage>http://localhost/bidata/api/marketshare</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>MarketShare</Category>
+			<RelativeUrl>bidata/api/marketshare?page={pagenum}</RelativeUrl>
+			<Description>Gets all marketshare information we collect by page.</Description>
+			<Usage>http://localhost/bidata/api/marketshare?page=5</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>MarketShare</Category>
+			<RelativeUrl>bidata/api/marketshare/{domainid}</RelativeUrl>
+			<Description>Gets all marketshare information for a specific domain.</Description>
+			<Usage>http://localhost/bidata/api/marketshare/123</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>MarketShare</Category>
+			<RelativeUrl>bidata/api/marketshare</RelativeUrl>
+			<Description>Creates a marketshare record from the JSON page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/marketshare <br /> 
+				<b>Sample JSON object:</b> <br />
+				{"BitMaskId":4,"TypeId":3,"DomainId":73557,"Value":"Go Daddy","SampleDate":"3/15/2013 3:17:32 PM","UniqueID":"00000000-0000-0000-0000-000000000000"}
+				]]>
+			</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Portfolio</Category>
+			<RelativeUrl>bidata/api/portfolio</RelativeUrl>
+			<Description>Gets all portfolio domain information we collect.</Description>
+			<Usage>http://localhost/bidata/api/portfolio</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Portfolio</Category>
+			<RelativeUrl>bidata/api/portfolio?page={pagenum}</RelativeUrl>
+			<Description>Gets all information we collect for portfolio domains by page.</Description>
+			<Usage>http://localhost/bidata/api/portfolio?page=5</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Portfolio</Category>
+			<RelativeUrl>bidata/api/portfolio/{shopperid}</RelativeUrl>
+			<Description>Gets all information for a specific shopper in the GoDaddy portfolio.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/portfolio/10005093</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Portfolio</Category>
+			<RelativeUrl>bidata/api/portfolio/{domainname}</RelativeUrl>
+			<Description>Gets all information for a specific domain in the GoDaddy portfolio.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/portfolio/SAMSIGNSANDWINDOWPAINTING.COM</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>Portfolio</Category>
+			<RelativeUrl>bidata/api/portfolio</RelativeUrl>
+			<Description>Creates a portfolio domain record from the JSON page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/portfolio <br /> 
+				<b>Sample JSON object:</b> <br />
+				{"TypeId":3,"DomainId":73557,"ShopperID":"sid1","Value":"Go Daddy","UniqueID":"00000000-0000-0000-0000-000000000000"}
+				]]>
+			</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Twitter</Category>
+			<RelativeUrl>bidata/api/twitter/mentions</RelativeUrl>
+			<Description>Gets all twitter mentions for GoDaddy.</Description>
+			<Usage>http://localhost/bidata/api/twitter/mentions</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Twitter</Category>
+			<RelativeUrl>bidata/api/twitter/mentions?page={pagenum}</RelativeUrl>
+			<Description>Gets all twitter mentions for GoDaddy by page.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/twitter/mentions?page=1</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Twitter</Category>
+			<RelativeUrl>bidata/api/twitter/mentions/{mentionid}</RelativeUrl>
+			<Description>Gets GoDaddy twitter mention by id.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/twitter/mentions/37</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>Twitter</Category>
+			<RelativeUrl>bidata/api/twitter/keywords</RelativeUrl>
+			<Description>Gets the list of keywords we are searching twitter for.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/twitter/keywords</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>Twitter</Category>
+			<RelativeUrl>bidata/api/twitter/mentions</RelativeUrl>
+			<Description>Creates a twitter mentions record from the JSON page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/twitter/mentions <br /> 
+				<b>Sample JSON object:</b> <br />
+				{"KeywordId":7,"StatusList":[{"created_at":"Fri, 15 Mar 2013 20:48:12 +0000","from_user":"drifthosting","from_user_id":1227155772,"from_user_id_str":"1227155772","from_user_name":"Drift hosting","geo":null,"id":312666564975538176,"id_str":"312666564975538176","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http://a0.twimg.com/profile_images/3318949521/cad21b4a94c51c348fd9ec1496a908f1_normal.jpeg","source":"\u0026lt;a href=\u0026quot;http://twitter.com/\u0026quot;\u0026gt;web\u0026lt;/a\u0026gt;","text":"Special Offer! $3.99 and Free Private Registration from GoDaddy http://t.co/Ze7mIyk3oB","to_user":null,"to_user_id":null,"to_user_id_str":null,"to_user_name":null},{"created_at":"Fri, 15 Mar 2013 20:48:10 +0000","from_user":"angelicajones11","from_user_id":174552288,"from_user_id_str":"174552288","from_user_name":"angelicajones","geo":null,"id":312666553218912256,"id_str":"312666553218912256","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http://a0.twimg.com/profile_images/3346466841/76538927bfb96200b51f5386393462de_normal.jpeg","source":"\u0026lt;a href=\u0026quot;http://twitter.com/\u0026quot;\u0026gt;web\u0026lt;/a\u0026gt;","text":"Special Offer! $3.99 and Free Private Registration from GoDaddy http://t.co/ltk4yWvTH3","to_user":null,"to_user_id":null,"to_user_id_str":null,"to_user_name":null},{"created_at":"Fri, 15 Mar 2013 20:48:09 +0000","from_user":"GoDaddy","from_user_id":14949454,"from_user_id_str":"14949454","from_user_name":"Go Daddy","geo":null,"id":312666550492618752,"id_str":"312666550492618752","iso_language_code":"en","metadata":{"result_type":"recent"},"profile_image_url":"http://a0.twimg.com/profile_images/2781872641/a6ae2475b4ba3a89bea7078a0093098c_normal.jpeg","source":"\u0026lt;a href=\u0026quot;http://www.conversocial.com\u0026quot;\u0026gt;Conversocial\u0026lt;/a\u0026gt;","text":"@bubsbears What address? Are you using our App or Webmail on the iPad? ^C","to_user":"bubsbears","to_user_id":234770266,"to_user_id_str":"234770266","to_user_name":"Bubs Bears"}]}
+				]]>
+			</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>Twitter</Category>
+			<RelativeUrl>bidata/api/twitter/users</RelativeUrl>
+			<Description>Creates twitter user records from the JSON list page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/twitter/users <br /> 
+				<b>Sample JSON object:</b> <br />
+				[{"is_translator":false,"profile_background_image_url_https":"https://si0.twimg.com/profile_background_images/813128980/04f7f0aba97c89f9963c83567ed0e53f.jpeg","favourites_count":2217,"profile_background_color":"000000","url":"http://godaddy.com/","name":"Go Daddy","statuses_count":59744,"notifications":null,"profile_background_tile":false,"utc_offset":-25200,"profile_sidebar_fill_color":"EFEFEF","description":"The Web\u0027s largest hosting and domain registration provider. http://x.co/help for 24/7 support. Follow us for expert advice and special #deals.","follow_request_sent":null,"geo_enabled":true,"profile_image_url_https":"https://si0.twimg.com/profile_images/2781872641/a6ae2475b4ba3a89bea7078a0093098c_normal.jpeg","default_profile":false,"listed_count":3178,"lang":"en","created_at":"Thu May 29 23:25:49 +0000 2008","profile_sidebar_border_color":"FFFFFF","status":{"in_reply_to_user_id":18399094,"in_reply_to_user_id_str":"18399094","contributors":null,"in_reply_to_status_id":312670194055122944,"created_at":"Fri Mar 15 21:36:51 +0000 2013","entities":null,"favorited":false,"truncated":false,"place":null,"geo":null,"retweet_count":0,"in_reply_to_screen_name":"nacron","coordinates":null,"source":"\u003ca href=\"http://www.conversocial.com\" rel=\"nofollow\"\u003eConversocial\u003c/a\u003e","retweeted":false,"id":312678808564158464,"in_reply_to_status_id_str":"312670194055122944","id_str":"312678808564158464","text":"@nacron Have you sent in the full bounce with headers in to support for review? If so, can you give me the ticket number for it? ^Jr","possibly_sensitive":null,"user":null},"show_all_inline_media":null,"verified":true,"profile_use_background_image":true,"screen_name":"GoDaddy","time_zone":"Arizona","profile_text_color":"333333","followers_count":166892,"profile_image_url":"http://a0.twimg.com/profile_images/2781872641/a6ae2475b4ba3a89bea7078a0093098c_normal.jpeg","default_profile_image":false,"contributors_enabled":true,"profile_background_image_url":"http://a0.twimg.com/profile_background_images/813128980/04f7f0aba97c89f9963c83567ed0e53f.jpeg","friends_count":106329,"id":14949454,"id_str":"14949454","following":null,"profile_link_color":"07B312","location":"Arizona, USA"},{"id":14714040,"id_str":"14714040","name":"Network Solutions ","screen_name":"netsolcares","location":"ÜT: 41.041544,-76.232609","url":"http://www.networksolutions.com","description":"Real Person™ support . . . Looking forward to your questions and conversations! Need help? We\u0027re here 24/7: http://bit.ly/nshelp","followers_count":11386,"friends_count":5434,"listed_count":501,"created_at":"Fri May 09 14:48:34 +0000 2008","favourites_count":26,"utc_offset":-18000,"time_zone":"Eastern Time (US \u0026 Canada)","geo_enabled":false,"verified":true,"statuses_count":30957,"lang":"en","status":{"created_at":"Fri Mar 15 20:16:12 +0000 2013","id":312658511966400513,"id_str":"312658511966400513","text":"@nathankitchen no relationship. is there something we can help you with? ^kh","source":"\u003ca href=\"http://www.hootsuite.com\" rel=\"nofollow\"\u003eHootSuite\u003c/a\u003e","truncated":false,"in_reply_to_status_id":312653184109780992,"in_reply_to_status_id_str":"312653184109780992","in_reply_to_user_id":35739130,"in_reply_to_user_id_str":"35739130","in_reply_to_screen_name":"nathankitchen","geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorited":false,"retweeted":false,"possibly_sensitive":null,"entities":null,"user":null},"contributors_enabled":true,"is_translator":false,"profile_background_color":"9AE4E8","profile_background_image_url":"http://a0.twimg.com/profile_background_images/201453906/netsol_twitter.jpg","profile_background_image_url_https":"https://si0.twimg.com/profile_background_images/201453906/netsol_twitter.jpg","profile_background_tile":false,"profile_image_url":"http://a0.twimg.com/profile_images/346048732/twitter-avatar_normal.png","profile_image_url_https":"https://si0.twimg.com/profile_images/346048732/twitter-avatar_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"BDDCAD","profile_sidebar_fill_color":"E9F2C5","profile_text_color":"333333","profile_use_background_image":true,"default_profile":false,"default_profile_image":false,"following":null,"follow_request_sent":null,"notifications":null,"show_all_inline_media":null}]
+				]]>
+			</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>YouTube</Category>
+			<RelativeUrl>bidata/api/youtube/{videoid}</RelativeUrl>
+			<Description>Gets YouTube video by video id.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/youtube/345df36756xdfcg</Usage>
+		</API>
+		<API>
+			<Type>GET</Type>
+			<Category>YouTube</Category>
+			<RelativeUrl>bidata/api/youtube/channel/{userid}</RelativeUrl>
+			<Description>Gets YouTube channel information by user id.</Description>
+			<Usage>http://bizintel-ws.intranet.gdg/bidata/api/youtube/channel/godaddy</Usage>
+		</API>
+		<API>
+			<Type>POST</Type>
+			<Category>YouTube</Category>
+			<RelativeUrl>bidata/api/youtube</RelativeUrl>
+			<Description>Creates a youtube channel record from the JSON page value and inserts into the database.</Description>
+			<Usage>
+				<![CDATA[
+				http://localhost/bidata/api/youtube <br /> 
+				<b>Sample JSON object:</b> <br />
+				{"ID":1,"Name":"GoDaddy","Feed":[{"ViewCount":6796,"CommentCount":8,"Likes":38,"Dislikes":2,"Title":"Good Luck Danica: Make YOUR Dreams Come True! | Official GoDaddy.com Video","ChannelVideoID":"AUGj2segjh0","UploadedDate":"\/Date(1361567914000)\/"},{"ViewCount":984,"CommentCount":0,"Likes":12,"Dislikes":2,"Title":"Why Danica Patrick Likes The Daytona 500 | Official GoDaddy.com video","ChannelVideoID":"X6F13CbdXVs","UploadedDate":"\/Date(1361489457000)\/"},{"ViewCount":11308,"CommentCount":27,"Likes":69,"Dislikes":11,"Title":"Go Daddy Employee Town Hall | Harlem Shake Style","ChannelVideoID":"k_PMAMyigxc","UploadedDate":"\/Date(1360960308000)\/"},{"ViewCount":2520,"CommentCount":0,"Likes":10,"Dislikes":10,"Title":"Love at First Website! | Official GoDaddy.com Video","ChannelVideoID":"5ct_SWYtzAc","UploadedDate":"\/Date(1360859499000)\/"},{"ViewCount":58559,"CommentCount":23,"Likes":104,"Dislikes":17,"Title":"Perfect Match - Danica Patrick Tells All (Behind the Scenes) - Official Go Daddy Video","ChannelVideoID":"0usV0x34HEE","UploadedDate":"\/Date(1360262416000)\/"},{"ViewCount":26639,"CommentCount":1,"Likes":54,"Dislikes":24,"Title":"Censorship Hearing | Official GoDaddy.com Video","ChannelVideoID":"5bPS86GOxT4","UploadedDate":"\/Date(1359584697000)\/"},{"ViewCount":131119,"CommentCount":8,"Likes":88,"Dislikes":43,"Title":"Fly the Danica Skies | Official GoDaddy.CO Video","ChannelVideoID":"w81FPUcItN8","UploadedDate":"\/Date(1358533082000)\/"},{"ViewCount":75922,"CommentCount":2,"Likes":44,"Dislikes":51,"Title":"Pitches (Extended) | Official GoDaddy.com Video","ChannelVideoID":"XqkohD7MSmU","UploadedDate":"\/Date(1357839458000)\/"},{"ViewCount":10002,"CommentCount":0,"Likes":3,"Dislikes":6,"Title":"News (Ad) | Official GoDaddy.com Video","ChannelVideoID":"pw0J4xEYrSo","UploadedDate":"\/Date(1266524453000)\/"},{"ViewCount":11817,"CommentCount":0,"Likes":8,"Dislikes":6,"Title":"Lola (Ad) | Official GoDaddy.com Video","ChannelVideoID":"whxW7Xk5t6o","UploadedDate":"\/Date(1266524128000)\/"}],"TotalSubscribers":7068,"TotalVideoViews":14712593,"TotalComments":9463,"TotalLikes":14515,"TotalDislikes":16514}
+				]]>
+			</Usage>
+		</API>		
+	</WebAPI>
+	<UIAPI>
+		<API>
+			<Type>GET</Type>
+			<Category>API</Category>
+			<RelativeUrl>bidata/home/discovery</RelativeUrl>
+			<Description>Displays API help documentation for the WebAPI calls.</Description>
+			<Usage>http://localhost:63222/home/discovery</Usage>
+		</API>
+	</UIAPI>
+</Documentation>
