@@ -7,11 +7,11 @@ There are two parts to DRONE, the web crawler (aka CrawlDaddy) and the social me
 
 ####Social Media:
 
-DRONE Social Media calls 3rd party API's to gather specific information about Go Daddy on a configurable schedule.
+DRONE Social Media calls 3rd party API's to gather specific information about [company] on a configurable schedule.
 
 ####Web Crawler:
 
-DRONE Crawler crawls the entire GoDaddy domain portfolio processing the hosted site pages for key information, which it then stores as a key value pair in a SQL database. How a page/site is "processed" is completely up to the implementation of each processor. Some scan the 
+DRONE Crawler crawls a domain portfolio processing the hosted site pages for key information, which it then stores as a key value pair in a SQL database. How a page/site is "processed" is completely up to the implementation of each processor. Some scan the 
 page for keywords, some scan meta tags, and others check for site cookies. Since DRONE is completely extensible a developer could implement a processor to "process" the pages for any data that could be parsed from a website. DRONE completes a full portfolio scan in approximately one months time. Since the portfolio contains more than 55 million domains there is no historical data being archived at this time.
 
 _Technically_
@@ -42,7 +42,7 @@ DRONE Crawler collects DNS data as well as any data that can be identified by ke
 The bi data discovery page details a large portion of the API calls either completed, in progress, or planned for accessing and contributing to DRONE data.
 - http://bizintel-ws.intranet.gdg/bidata/home/discovery
 
-DRONE Social Media gathers tweets about Go Daddy, Go Daddy Facebook page likes and demographics, YouTube video views and likes, as well as Crunchbase small biz statistics.
+DRONE Social Media gathers tweets about [company] Facebook page likes and demographics, YouTube video views and likes, as well as Crunchbase small biz statistics.
 
 DRONE Crawler source domain data includes an Inactive/Active status, Domain Name, Domain ID, Shopper ID, and Private Label ID and is refreshed daily from the Domains databases.
 
@@ -52,7 +52,6 @@ The data below is collected by Processors that have been developed and plugged i
 * DNS Host - the DNS records found for the domain
 * WebHost - The web host is determined by looking up the Autonomous System Name (ASN) for an IP. This ASN mapping is done by Cymru
 * Email Host - Obtained from the MX records. Note that this isn't extremely useful as CPanel email users will be represented as "self-hosting" their domains.
-* GoDaddy Parked Page - The type of parked page is determined by the IPRange of the website. Parked domains are classified as Park Foward, Cash Parking, Static Parking, Dynamic Parking.
 * Shopping Cart products - Shopping cart products are determine by scraping the served pages for keywords, links, cookies and meta tags that identify the site as using a particular product. (These are defined in an XML rules file located within the project) 
 
 _Current shopping carts being identified are:_
@@ -85,12 +84,12 @@ Constant Contact - The page is scanned for keywords matching the constant contac
 
 _DRONE Crawler data_
 
-Server.Database: M1PWBIGRPTSQL02.gdWebMarketShare
+Server.Database: 
 Source domain table: rptGdDomains
 Found data table: rptGdDomainAttributes
 Lookup table: rptMarketShareType
 
-SELECT * FROM [gdWebMarketShare].[dbo].[rptMarketShareType] 
+SELECT * FROM [gg].[dbo].[rptMarketShareType] 
 
 3 - WebHost 4 - EmailHost 5 - DNSHost 7 - SSLIssuer
 
@@ -143,7 +142,7 @@ HAVING COUNT(a.Value) > 10
 
 /*
 
-verticals matching "cleaning, seattle" that are hosted with GoDaddy
+verticals matching "cleaning, seattle" 
 
 */
 
@@ -154,7 +153,7 @@ WHERE a.TypeID = 14 and b.isActive = 1
 and a.Value like '%localCity|seattle%'
 and a.Value like '%cleaning%'
 and a.rptGdDomainsID in (SELECT DISTINCT(rptGdDomainsID) FROM rptGDDomainAttributes WHERE TypeID = 3 AND
-Value = 'Go Daddy')
+Value = 'XXX')
 
  
 
@@ -201,7 +200,7 @@ http://bizintel-ws.intranet.gdg/bidata/api/portfolio/31171465
 Other features of the DRONE Framework
 
 Scheduler - Runs BTEQ scripts agains teradata using a cron style service (quartz.net). 
-The database underneath is a MongoDB replicaset hosted on the p3pwbidata0x servers. (mongodb1-3.jomax.paholdings.com )
+The database underneath is a MongoDB replicaset hosted on the p3pwbidata0x servers. 
 http://bizintel-ws.intranet.gdg/bidata/scheduler
 
 Logi>R webservice - A web api that exposes R functionality for reporting. Returns XML, used by Logi
